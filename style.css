@@ -1,1 +1,92 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: black;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-buttons button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: red;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.footer-buttons button:hover {
+  background-color: yellow;
+}
+
+@media (min-width: 768px) {
+  .footer-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .footer-buttons button {
+    margin: 0 10px;
+  }
+}
+.contact-info, .mission, .publications {
+  margin: 20px 0;
+  color: white;
+  text-align: left;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+p {
+  color: white;
+}
+
+h4 {
+  color: yellow;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    text-align: left;
+  }
+  .contact-info {
+    text-align: left;
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+  .mission, .publications {
+    text-align: left;
+    margin-top: 20px;
+    flex: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */
