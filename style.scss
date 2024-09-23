@@ -203,11 +203,8 @@ body, html {
 }
 
 
-<<<<<<< Updated upstream
 
 
-=======
->>>>>>> Stashed changes
 .header {
     position: relative;
     height: 100vh;
@@ -256,4 +253,44 @@ body, html {
     max-width: 150px;
     max-height: 150px;
     z-index: 2; /* Ensure it's above other elements */
+}
+
+.overlay-text1 {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 10em; /* Adjust the font size */
+    font-weight: bold;
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+ 
+   color: #FBCC3C;
+}
+
+.overlay-text2 {
+    position: absolute;
+    top: 60%;
+    left: 66%;
+    transform: translate(-50%, -50%);
+    font-size: 10em; /* Adjust the font size */
+    font-weight: bold;
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #E33216;
+}
+
+
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 2rem; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .overlay-text {
+        font-size: 1.5rem; /* Further adjustment for mobile */
+    }
 }
