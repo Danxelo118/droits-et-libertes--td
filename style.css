@@ -128,7 +128,6 @@ a:hover {
     flex-direction: row;
   }
 }
-<<<<<<< Updated upstream
 body, html {
   height: 100%;
   margin: 0;
@@ -180,8 +179,6 @@ body, html {
   background-color: gray; /* Change to gray on hover */
 }
 
-=======
->>>>>>> Stashed changes
 .header {
   position: relative;
   height: 80vh;
