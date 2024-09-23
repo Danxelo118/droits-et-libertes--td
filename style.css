@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica";
   margin: 0;
   padding: 0;
 }
@@ -27,8 +27,16 @@ footer {
   margin: 10px 0;
   background-color: red;
   color: black;
-  font-size: 16px;
+  font-size: 13px;
   cursor: pointer;
+}
+
+.footer-buttons .btn-donner {
+  background-color: yellow;
+}
+
+.footer-buttons .btn-donner:hover {
+  background-color: red;
 }
 
 .footer-buttons button:hover {
