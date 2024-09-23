@@ -1,36 +1,47 @@
 
-
-body {
-    font-family: 'Helvetica';
+body, html {
+    height: 100%;
     margin: 0;
+    font-family: 'Helvetica';
     padding: 0;
 }
+
 
 footer {
     background-color: black;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .footer-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
 .footer-buttons {
-    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
 }
 
 .footer-buttons button {
     padding: 10px 20px;
-    margin: 10px 0;
     background-color: red;
     color: black;
     font-size: 13px;
-    cursor: pointer;
+    white-space: nowrap;
+    flex: 1;
+    max-width: 300px;
+    margin: 0 10px;
 }
 
 .footer-buttons .btn-donner {
@@ -46,26 +57,69 @@ footer {
     background-color: yellow;
 }
 
-@media (min-width: 768px) {
-    .footer-buttons {
-        flex-direction: row;
-        justify-content: center;
-    }
-    .footer-buttons button {
-        margin: 0 10px;
-    }
+
+.logo-footer {
+    width: auto;
+    display: flex;
+    max-width: 5px;
+    justify-content: center;
+    height: auto;
 }
 
 
-.contact-info, .mission, .publications {
+@media (max-width: 768px) {
+    .mission .publications  {
+        display: none;
+    }
+}
+
+.contact-info {
     margin: 20px 0;
     color: white;
-    text-align: left;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
 }
+
+
+@media (min-width: 768px) {
+    .footer-buttons {
+        margin-bottom: 20px;
+    }
+
+ 
+    .mission, .publications {
+        display: block;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .contact-info {
+        flex: 1;
+        text-align: left;
+    }
+
+    .mission, .publications {
+        flex: 2;
+        text-align: left;
+        margin-left: 20px;
+    }
+}
+
+
 
 a {
     color: red;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 p {
@@ -80,33 +134,20 @@ a:hover {
     text-decoration: underline;
 }
 
-@media (min-width: 768px) {
-    .footer-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-        text-align: left;
-    }
 
-.contact-info {
-    text-align: left;
-    margin-top: 20px;
-    align-self: flex-start;
-}
-
- .mission, .publications {
-    text-align: left;
-    margin-top: 20px;
-    flex: 1;
-}
-}
 
 @media (min-width: 1024px) {
     .footer-container {
-        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+    }
+
+    .content-sections {
+        display: flex;
+        flex-direction: row;
     }
 }
 
+<<<<<<< Updated upstream
 body, html {
     height: 100%;
     margin: 0;
@@ -160,6 +201,12 @@ body, html {
 .dropdown-item:hover {
     background-color: gray; /* Change to gray on hover */
 }
+=======
+
+
+
+
+>>>>>>> Stashed changes
 
 
 .header {
