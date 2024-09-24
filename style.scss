@@ -225,6 +225,8 @@ h4 {
 
 .footer-container {
     display: grid;
+    padding: 20px;
+    box-sizing: border-box;
     grid-template-areas: 
         "buttons"
         "no1"
@@ -281,11 +283,12 @@ h4 {
 
 .footer-bottom, .no3 {
     grid-area: no3;
-    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 0px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    display: flex;
+  
 }
 
 /* Layout pour tablette et bureau */
@@ -308,12 +311,14 @@ h4 {
     .no1 {
         justify-content: center; /* Aligner verticalement */
         align-items: flex-start; /* Aligner à gauche */
+        padding: 0 20px;
     }
 
     .no2 {
         justify-content: flex-end; /* Aligner à droite */
         flex-direction: row; /* Aligner les éléments en ligne */
         gap: 10px;
+        padding: 0 20px;
     }
 
     .no3 {
