@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Styles 
 body, html {
     height: 100%;
     margin: 0;
@@ -16,6 +16,8 @@ footer {
     width: 100%;
 }
 
+
+
 .footer-container {
     width: 100%;
     display: flex;
@@ -24,7 +26,7 @@ footer {
     text-align: center;
 }
 
-/* Footer Buttons */
+
 .footer-buttons {
     display: flex;
     justify-content: center;
@@ -55,7 +57,6 @@ footer {
     background-color: yellow;
 }
 
-/* Logo Footer */
 .logo-footer img {
     max-width: 100px; 
     height: auto;
@@ -65,7 +66,7 @@ footer {
     margin-bottom: 10px; 
 }
 
-/* Contact Info */
+
 .contact-info {
     margin: 10px 0;
     color: white;
@@ -73,7 +74,7 @@ footer {
     width: 100%;
 }
 
-/* Mission and Publications Styles */
+
 .mission, .publications {
     color: white;
     text-align: left;
@@ -82,14 +83,14 @@ footer {
     width: 100%;
 }
 
-/* Mobile - Default view */
+
 @media (max-width: 768px) {
     .mission, .publications {
         display: none; 
     }
 }
 
-/* Tablet and Desktop */
+
 @media (min-width: 768px) {
     .footer-container {
         max-width: 1200px;
@@ -107,11 +108,10 @@ footer {
         margin-bottom: 10px;
     }
 
-    /* Display mission and publications side by side */
     .content-sections {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end; /* Align to the right */
+        justify-content: flex-end; 
         align-items: flex-start;
         width: 100%;
         gap: 20px;
@@ -135,7 +135,6 @@ footer {
 }
 
 @media (min-width: 1024px) {
-    /* Ensure grid for large screens */
     .footer-container {
         display: grid;
         grid-template-rows: auto auto;
@@ -145,7 +144,7 @@ footer {
         gap: 20px;
     }
 
-    /* Adjust the layout */
+
     .logo-footer {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
@@ -183,7 +182,29 @@ footer {
 }
 
 
+*/
+
+
+
+
 /* Links and General Text */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Helvetica';
+    padding: 0;
+}
+
+footer {
+    background-color: black;
+    padding: 10px 0;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 a {
     color: red;
     text-decoration: none;
@@ -202,6 +223,131 @@ h4 {
     font-size: 13px;
 }
 
+.footer-container {
+    display: grid;
+    grid-template-areas: 
+        "buttons"
+        "no1"
+        "no2"
+        "no3";
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-buttons {
+    grid-area: buttons;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.no1, .no2, .no3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    font-size: 13px;
+}
+
+.footer-buttons button {
+    padding: 10px 15px;
+    background-color: #E33216;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-buttons .btn-donner {
+    background-color: #FBCC3C;
+}
+
+.footer-buttons .btn-donner:hover {
+    background-color: #E33216;
+}
+
+.footer-buttons button:hover {
+    background-color: #FBCC3C;
+}
+
+.logo-footer img {
+    max-width: 100px;
+}
+
+.contact-info, .mission, .publications {
+    margin-top: 10px;
+}
+
+.footer-bottom, .no3 {
+    grid-area: no3;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Layout pour tablette et bureau */
+@media (min-width: 769px) {
+    .footer-container {
+        grid-template-areas: 
+            "buttons buttons"
+            "no1 no2"
+            "no3 no3"; /* Assurer que no3 s'étend sur toute la largeur */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        gap: 10px;
+        text-align: left; /* Aligner le texte à gauche */
+    }
+
+    .footer-buttons {
+        justify-content: center; /* Boutons centrés sur les écrans plus grands */
+    }
+
+    .no1 {
+        justify-content: center; /* Aligner verticalement */
+        align-items: flex-start; /* Aligner à gauche */
+    }
+
+    .no2 {
+        justify-content: flex-end; /* Aligner à droite */
+        flex-direction: row; /* Aligner les éléments en ligne */
+        gap: 10px;
+    }
+
+    .no3 {
+        grid-column: 1 / -1; /* S'assurer que no3 prend toute la largeur */
+        justify-content: center; /* Toujours centré */
+        text-align: center;
+    }
+
+    .contact-info {
+        align-items: flex-start;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission, .publications {
+        display: none; /* Cacher certains éléments sur mobile */
+    }
+
+    .contact-info {
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .no3 {
+        justify-content: center; /* Toujours centré sur mobile */
+    }
+}
 
 
 
