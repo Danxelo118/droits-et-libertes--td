@@ -1,4 +1,4 @@
-
+/* General Styles */
 body, html {
     height: 100%;
     margin: 0;
@@ -6,14 +6,13 @@ body, html {
     padding: 0;
 }
 
-
 footer {
     background-color: black;
-    padding: 20px;
+    padding: 10px 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -25,23 +24,23 @@ footer {
     text-align: center;
 }
 
+/* Footer Buttons */
 .footer-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .footer-buttons button {
-    padding: 10px 20px;
+    padding: 5px 10px;
     background-color: red;
     color: black;
-    font-size: 13px;
+    font-size: 11px;
     white-space: nowrap;
     flex: 1;
-    max-width: 300px;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .footer-buttons .btn-donner {
@@ -52,67 +51,139 @@ footer {
     background-color: red;
 }
 
-
 .footer-buttons button:hover {
     background-color: yellow;
 }
 
-
-.logo-footer {
-    width: auto;
-    display: flex;
-    max-width: 5px;
-    justify-content: center;
+/* Logo Footer */
+.logo-footer img {
+    max-width: 100px; 
     height: auto;
 }
 
-
-@media (max-width: 768px) {
-    .mission .publications  {
-        display: none;
-    }
+.logo-footer {
+    margin-bottom: 10px; 
 }
 
+/* Contact Info */
 .contact-info {
-    margin: 20px 0;
+    margin: 10px 0;
     color: white;
     text-align: center;
     width: 100%;
-    max-width: 600px;
 }
 
+/* Mission and Publications Styles */
+.mission, .publications {
+    color: white;
+    text-align: left;
+    margin: 0;
+    font-size: 10px;
+    width: 100%;
+}
 
-@media (min-width: 768px) {
-    .footer-buttons {
-        margin-bottom: 20px;
-    }
-
- 
+/* Mobile - Default view */
+@media (max-width: 768px) {
     .mission, .publications {
-        display: block;
+        display: none; 
     }
+}
 
+/* Tablet and Desktop */
+@media (min-width: 768px) {
     .footer-container {
-        display: flex;
-        flex-direction: column; 
-        width: 100%;
         max-width: 1200px;
+        padding: 10px;
     }
 
     .contact-info {
-        flex: 1;
         text-align: left;
+        margin: 0;
+        max-width: 100%;
+        font-size: 10px;
+    }
+
+    .footer-buttons {
+        margin-bottom: 10px;
+    }
+
+    /* Display mission and publications side by side */
+    .content-sections {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; /* Align to the right */
+        align-items: flex-start;
+        width: 100%;
+        gap: 20px;
     }
 
     .mission, .publications {
-        flex: 2;
-        text-align: left;
+        display: block;
+        flex: 1;
         margin-left: 20px;
+    }
+
+    .mission {
+        margin-left: 0; 
+    }
+
+    .logo-footer {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        justify-content: flex-start;
     }
 }
 
+@media (min-width: 1024px) {
+    /* Ensure grid for large screens */
+    .footer-container {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+        width: 100%;
+        gap: 20px;
+    }
+
+    /* Adjust the layout */
+    .logo-footer {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        justify-content: flex-start;
+    }
+
+    .contact-info {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        justify-content: flex-start;
+    }
+
+    .content-sections {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .mission, .publications {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+.footer-bottom {
+    grid-column: span 2;
+    font-size: 8px;
+    text-align: center;
+    margin-bottom: 0px;
+    width: 100%;
+}
 
 
+/* Links and General Text */
 a {
     color: red;
     text-decoration: none;
@@ -128,30 +199,13 @@ p {
 
 h4 {
     color: yellow;
-}
-
-a:hover {
-    text-decoration: underline;
+    font-size: 13px;
 }
 
 
 
-@media (min-width: 1024px) {
-    .footer-container {
-        flex-direction: column;
-    }
-
-    .content-sections {
-        display: flex;
-        flex-direction: row;
-    }
-}
 
 
-body, html {
-    height: 100%;
-    margin: 0;
-}
 
 /* Change the color of the navbar toggler lines to white */
 .navbar-toggler {
