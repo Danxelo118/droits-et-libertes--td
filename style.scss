@@ -485,6 +485,7 @@ h4 {
     overflow: hidden;
     text-overflow: ellipsis;
     color: #FBCC3C;
+    font-weight: 350;
   }
   
   .overlay-text2 {
@@ -551,6 +552,18 @@ h4 {
     height: 16px; 
     margin-left: 5px; 
   }
+
+
+    .underline {
+        text-decoration: underline;
+    }
+
+    .nav-link.dropdown-toggle:hover {
+        font-size: 1.1em; 
+ 
+        color: #E33216 !important; 
+    }
+
   
   
   @media (max-width: 1000px) {
