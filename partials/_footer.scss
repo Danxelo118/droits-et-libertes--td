@@ -1,0 +1,162 @@
+/* footer */
+
+footer {
+    background-color: black;
+    padding: 10px 0;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-container {
+    display: grid;
+    padding: 20px;
+    box-sizing: border-box;
+    grid-template-areas: 
+        "buttons"
+        "no1"
+        "no2"
+        "no3";
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-buttons {
+    grid-area: buttons;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.no1, .no2, .no3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    font-size: 13px;
+}
+
+.footer-buttons button {
+    padding: 10px 15px;
+    background-color: #E33216;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-buttons .btn-donner {
+    background-color: #FBCC3C;
+}
+
+.footer-buttons .btn-donner:hover {
+    background-color: #ffffff;
+}
+
+.footer-buttons button:hover {
+    background-color: #f5f5f5;
+}
+
+.logo-footer img {
+    max-width: 100px;
+}
+
+.contact-info, .mission, .publications {
+    margin-top: 10px;
+}
+
+.footer-bottom, .no3 {
+    grid-area: no3;
+    padding: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+@media (min-width: 769px) {
+    .footer-container {
+        grid-template-areas: 
+            "no1 buttons ."
+            "no1 no2 no4"
+            "no3 no3 no3"; 
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        gap: 10px;
+        text-align: left; 
+    }
+
+    .footer-buttons {
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        padding: 50px 0;
+        margin: 10px
+    }
+
+    .no1 {
+        grid-area: no1;
+        justify-content: center; 
+        align-items: center; 
+        padding: 0 20px;
+    }
+
+
+    .no4 {
+        grid-area: no4;
+        justify-content: flex-end;
+        flex-direction: row; 
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    .no2 {
+        grid-area: no2;
+        margin-top:-14em;
+        justify-content: flex-end;
+        flex-direction: row; 
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    .no3 {
+        grid-area: no3;
+        grid-column: 1 / -1; 
+        justify-content: center; 
+        text-align: center;
+    }
+
+    .contact-info {
+        align-items: flex-start;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission, .publications {
+        display: none; 
+    }
+
+    .contact-info {
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .no3 {
+        justify-content: center; 
+    }
+}
+
+
+
