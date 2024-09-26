@@ -187,13 +187,16 @@ footer {
 
 
 
-/* Links and General Text */
+
 body, html {
     height: 100%;
     margin: 0;
     font-family: 'Helvetica';
     padding: 0;
 }
+
+
+/* footer */
 
 footer {
     background-color: black;
@@ -291,39 +294,39 @@ h4 {
   
 }
 
-/* Layout pour tablette et bureau */
+
 @media (min-width: 769px) {
     .footer-container {
         grid-template-areas: 
             "buttons buttons"
             "no1 no2"
-            "no3 no3"; /* Assurer que no3 s'étend sur toute la largeur */
+            "no3 no3"; 
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto 1fr auto;
         gap: 10px;
-        text-align: left; /* Aligner le texte à gauche */
+        text-align: left; 
     }
 
     .footer-buttons {
-        justify-content: center; /* Boutons centrés sur les écrans plus grands */
+        justify-content: center; 
     }
 
     .no1 {
-        justify-content: center; /* Aligner verticalement */
-        align-items: flex-start; /* Aligner à gauche */
+        justify-content: center; 
+        align-items: flex-start; 
         padding: 0 20px;
     }
 
     .no2 {
-        justify-content: flex-end; /* Aligner à droite */
-        flex-direction: row; /* Aligner les éléments en ligne */
+        justify-content: flex-end;
+        flex-direction: row; 
         gap: 10px;
         padding: 0 20px;
     }
 
     .no3 {
-        grid-column: 1 / -1; /* S'assurer que no3 prend toute la largeur */
-        justify-content: center; /* Toujours centré */
+        grid-column: 1 / -1; 
+        justify-content: center; 
         text-align: center;
     }
 
@@ -338,7 +341,7 @@ h4 {
 
 @media (max-width: 768px) {
     .mission, .publications {
-        display: none; /* Cacher certains éléments sur mobile */
+        display: none; 
     }
 
     .contact-info {
@@ -350,74 +353,68 @@ h4 {
     }
 
     .no3 {
-        justify-content: center; /* Toujours centré sur mobile */
+        justify-content: center; 
     }
 }
 
 
 
+/* HEADER */
 
 
-/* Change the color of the navbar toggler lines to white */
 .navbar-toggler {
-    border: none; /* Remove border */
+    border: none; 
     margin-left: auto;
-}
+  }
+  
+  .navbar-toggler-icon {
+    background-image: none; 
+  }
+  
+  .navbar-toggler:before,
+  .navbar-toggler:after,
+  .navbar-toggler div,
+  .navbar-collapse.show {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000; 
+  }
+  
+  .navbar-collapse {
+    transition: none !important; 
+  }
+  
 
-.navbar-toggler-icon {
-    background-image: none; /* Remove default icon */
-}
+  .navbar-nav .nav-link {
+    color: white; 
+  }
+  
 
-.navbar-toggler:before, 
-.navbar-toggler:after, 
-.navbar-toggler div ,
+  .dropdown-menu {
+    background-color: black; 
+  }
+  
 
-/* Change navbar background to black when expanded */
-.navbar-collapse.show {
-    background-color: rgba(0, 0, 0, 0.8);; /* Background color of the expanded navbar */
-    position: absolute; /* Make dropdown position absolute */
-    top: 100%; /* Position it below the navbar */
-    left: 0; /* Align with left edge */
-    right: 0; /* Align with right edge */
-    z-index: 1000; /* Ensure it's on top of other elements */
-}
+  .dropdown-item {
+    color: white;
+  }
+  
 
-.navbar-collapse {
-    transition: none !important; /* Disable transition */
-}
-
-
-/* Set the text color of nav links to white */
-.navbar-nav .nav-link {
-    color: white; /* Set link color to white */
-}
-
-/* Set the background color of dropdown items */
-.dropdown-menu {
-    background-color: black; /* Background color of dropdown */
-}
-
-/* Set dropdown item text color */
-.dropdown-item {
-    color: white; /* Set dropdown item color to white */
-}
-
-/* Change dropdown item color on hover */
-.dropdown-item:hover {
-    background-color: gray; /* Change to gray on hover */
-}
-
-
-
-
-.header {
+  .dropdown-item:hover {
+    background-color: red;
+  }
+  
+  .header {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Set a background for visibility */
-}
-
-.header video {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .header video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -425,77 +422,129 @@ h4 {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -2; /* Video behind everything */
+    z-index: -2; 
     transform: translate(-50%, -50%);
-}
-
-.header img {
+  }
+  
+  .header img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the area */
-}
-
-.navbar {
-    background: rgba(255, 255, 255, 0.0); /* Semi-transparent background */
-}
-
-.navbar-nav .nav-link {
-    color: white !important; 
-}
-
-.navbar-nav .nav-link:hover {
-    color: #ccc !important; 
-}
-
-
-.logo {
-    position: absolute; /* Change to absolute positioning */
-    top: -30px !important; /* Move it above the viewport */
-    left: -30px !important; /* Move it to the left of the viewport */
+    -o-object-fit: cover;
+       object-fit: cover; 
+  }
+  
+  .navbar {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ccc !important;
+  }
+  
+  .logo {
+    position: absolute; 
+    top: -30px !important; 
+    left: -30px !important;
     max-width: 150px;
     max-height: 150px;
-    z-index: 2; /* Ensure it's above other elements */
-}
-
-.overlay-text1 {
+    z-index: 2;
+  }
+  
+  .overlay-text1 {
     position: absolute;
     top: 35%;
     left: 30%;
     transform: translate(-50%, -50%);
-    font-size: 10em; /* Adjust the font size */
+    font-size: 10em; 
     font-weight: bold;
-    white-space: nowrap; /* Prevents wrapping */
+    white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
- 
-   color: #FBCC3C;
-}
-
-.overlay-text2 {
+    color: #FBCC3C;
+  }
+  
+  .overlay-text2 {
     position: absolute;
     top: 60%;
     left: 66%;
     transform: translate(-50%, -50%);
-    font-size: 10em; /* Adjust the font size */
+    font-size: 10em; 
     font-weight: bold;
-    white-space: nowrap; /* Prevents wrapping */
+    white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
     color: #E33216;
-}
-
-
-@media (max-width: 768px) {
-    .overlay-text {
-        font-size: 2rem; /* Adjust for smaller screens */
+  }
+  .header-buttons {
+    position: absolute; 
+    top: 75px; 
+    right: 20px; 
+    display: flex; 
+    gap: 10px;
+    z-index: 10; 
+  }
+  
+  .header-buttons button {
+    padding: 10px 15px; 
+    background-color: #E33216; 
+    color: #000; 
+    border: none; 
+    cursor: pointer;
+  
+  }
+  
+  .header-buttons .btn-donner {
+    background-color: #FBCC3C;
+  }
+  
+  .header-buttons .btn-donner:hover {
+    background-color: #f6f6f6; 
+  }
+  
+  .header-buttons button:hover {
+    background-color: #ffffff; 
+  }
+  
+  
+  
+  @media (max-width: 1000px) {
+    .header-buttons {
+        top: 5%; 
+        right: 50%; 
+        transform: translate(50%, -50%); 
+  
+        align-items: center; 
     }
-}
-
-@media (max-width: 576px) {
-    .overlay-text {
-        font-size: 1.5rem; /* Further adjustment for mobile */
+  }
+  
+  .header-buttons button {
+    display: flex;
+    align-items: center; 
+  }
+  
+  .header-buttons .button-icon {
+    width: 16px; 
+    height: 16px; 
+    margin-left: 5px; 
+  }
+  
+  
+  @media (max-width: 1000px) {
+    .overlay-text1, .overlay-text2 {
+      font-size: 6rem; 
     }
-}
+  }
+  
+  @media (max-width: 800px) {
+    .overlay-text1, .overlay-text2 {
+      font-size: 3rem; 
+    }
+  }
+  
