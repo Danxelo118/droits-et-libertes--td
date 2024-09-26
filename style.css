@@ -498,6 +498,15 @@ h4 {
   margin-left: 5px;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
+.nav-link.dropdown-toggle:hover {
+  font-size: 1.1em;
+  color: #E33216 !important;
+}
+
 @media (max-width: 1000px) {
   .overlay-text1, .overlay-text2 {
     font-size: 6rem;
