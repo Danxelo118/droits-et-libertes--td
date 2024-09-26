@@ -435,6 +435,7 @@ h4 {
   overflow: hidden;
   text-overflow: ellipsis;
   color: #FBCC3C;
+  font-weight: 350;
 }
 
 .overlay-text2 {
