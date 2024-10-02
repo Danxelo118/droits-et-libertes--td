@@ -1,7 +1,9 @@
 @use "partials/header";
 @use "partials/footer";
 @use "partials/text";
-@use "partials/info";
+@use "partials/listedoits";
+@use "partials/pub";
+
 
 body, html {
     height: 100%;
@@ -13,6 +15,23 @@ body, html {
     
 }
  
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+} 
+
+
+
+
+
+
+
+
 
 
 
