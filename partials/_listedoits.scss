@@ -1,0 +1,50 @@
+.container {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+ 
+  
+}
+
+.bullet-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bullet-item {
+    font-size: 2.5em;
+    opacity: 0; /* Commencer invisible */
+    transform: translateY(20px); /* Déplacer vers le bas */
+    position: absolute; /* Pour superposer les éléments */
+    margin-top: -250px;
+}
+
+.title {
+    text-align: left; /* Centre le texte */
+    font-size: 3em; /* Taille de police */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 20px; /* Espacement en dessous du texte */
+    margin-top: 100px;
+    margin-left: 200px;
+    font-family: 'Helvetica', sans-serif; /* Utiliser la police Helvetica */
+    font-weight: 300; /* Poids de la police plus léger */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

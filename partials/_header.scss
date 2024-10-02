@@ -1,6 +1,7 @@
 /* HEADER */
 
 
+
 .navbar-toggler {
     border: none; 
     margin-left: auto;
@@ -48,9 +49,10 @@
   
   .header {
     position: relative;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5) !important;
+   
   }
   
   .header video {
@@ -61,7 +63,7 @@
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -2; 
+    z-index: -1; 
     transform: translate(-50%, -50%);
   }
   
@@ -195,7 +197,20 @@
   }
   
   @media (max-width: 800px) {
-    .overlay-text1, .overlay-text2 {
-      font-size: 3rem; 
+    .overlay-text1{
+      margin-top: 120px;
+      font-size: 4em; 
+      text-align: left !important; /* Aligne le texte à gauche */
+      margin-left: 10px; 
+  }
+    
+    
+    .overlay-text2 {
+      margin-top: -30px;
+        font-size: 3rem; 
+        text-align: left !important; /* Aligne le texte à gauche */
+       
     }
+
+    
   }
