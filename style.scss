@@ -1,22 +1,13 @@
 @use "partials/header";
 @use "partials/footer";
 @use "partials/text";
-
+@use "partials/info";
 
 body, html {
     height: 100%;
     margin: 0;
     font-family: 'Helvetica';
     padding: 0;
-}
-
-a {
-    color: red;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 
