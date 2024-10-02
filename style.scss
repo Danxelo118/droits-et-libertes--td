@@ -1,6 +1,8 @@
 @use "partials/header";
 @use "partials/footer";
 @use "partials/text";
+@use "partials/listedoits";
+@use "partials/pub";
 
 
 body, html {
@@ -8,7 +10,11 @@ body, html {
     margin: 0;
     font-family: 'Helvetica';
     padding: 0;
+
+
+    
 }
+ 
 
 a {
     color: red;
@@ -17,7 +23,15 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
+} 
+
+
+
+
+
+
+
+
 
 
 

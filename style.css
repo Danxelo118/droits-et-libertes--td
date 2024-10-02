@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* HEADER */
 .navbar-toggler {
   border: none;
@@ -42,9 +43,9 @@
 
 .header {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5) !important;
 }
 
 .header video {
@@ -55,7 +56,7 @@
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -2;
+  z-index: -1;
   transform: translate(-50%, -50%);
 }
 
@@ -180,8 +181,16 @@
   }
 }
 @media (max-width: 800px) {
-  .overlay-text1, .overlay-text2 {
+  .overlay-text1 {
+    margin-top: 120px;
+    font-size: 4em;
+    text-align: left !important; /* Aligne le texte à gauche */
+    margin-left: 10px;
+  }
+  .overlay-text2 {
+    margin-top: -30px;
     font-size: 3rem;
+    text-align: left !important; /* Aligne le texte à gauche */
   }
 }
 /* footer */
@@ -330,6 +339,49 @@ p {
 h4 {
   color: yellow;
   font-size: 13px;
+}
+
+.container {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bullet-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bullet-item {
+  font-size: 2.5em;
+  opacity: 0; /* Commencer invisible */
+  transform: translateY(20px); /* Déplacer vers le bas */
+  position: absolute; /* Pour superposer les éléments */
+  margin-top: -250px;
+}
+
+.title {
+  text-align: left; /* Centre le texte */
+  font-size: 3em; /* Taille de police */
+  color: #333; /* Couleur du texte */
+  margin-bottom: 20px; /* Espacement en dessous du texte */
+  margin-top: 100px;
+  margin-left: 200px;
+  font-family: "Helvetica", sans-serif; /* Utiliser la police Helvetica */
+  font-weight: 300; /* Poids de la police plus léger */
+}
+
+.pub {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 body, html {
