@@ -645,6 +645,68 @@ h4 {
     font-size: 2em;
   }
 }
+.en-vedette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 500px;
+}
+
+.image-vedette {
+  background-image: url("/Sources/medias/vedette.png");
+  background-repeat: no-repeat;
+  width: 40%;
+  border: 10px solid #E33216;
+  height: 300px;
+  background-size: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vedette {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+h8 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-vedette {
+  padding: 10px 20px;
+  background-color: #FF5733;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-vedette:hover {
+  background-color: #FF321A;
+}
+
+@media (max-width: 768px) {
+  .vedette {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
 body, html {
   height: 100%;
   margin: 0;
