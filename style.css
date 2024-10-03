@@ -379,7 +379,6 @@ h4 {
   background-color: #FBCC3C;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
   position: relative;
   height: auto;
   max-width: 300px;
@@ -408,7 +407,6 @@ h4 {
   cursor: pointer;
   text-align: center;
   background-color: #E33216;
-  border-radius: 5px;
 }
 
 /* Version Tablet and Desktop */
@@ -459,7 +457,7 @@ h4 {
   opacity: 0; /* Commencer invisible */
   transform: translateY(20px); /* Déplacer vers le bas */
   position: absolute; /* Pour superposer les éléments */
-  margin-top: -250px;
+  margin-top: -150px;
 }
 
 .title {
@@ -482,6 +480,97 @@ h4 {
   position: relative;
 }
 
+.news-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.news-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.news-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.news-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.news-card {
+  background: transparent; /* Pas de contour */
+  border-radius: 8px;
+  overflow: hidden;
+  width: calc(33.33% - 20px); /* 3 cards in a row on desktop */
+  text-align: left; /* Aligner le texte à gauche */
+  display: flex; /* Utiliser flexbox */
+  flex-direction: column; /* Aligner les éléments en colonne */
+  justify-content: space-between; /* Espace entre les éléments */
+}
+
+.news-card img {
+  width: 80%; /* Réduire la taille de l'image à 80% de la largeur de la carte */
+  height: auto;
+  margin: 10px 0; /* Ajouter un espace en haut et en bas de l'image */
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+}
+
+/* Effet de survol pour l'image */
+.news-card:hover img {
+  transform: scale(1); /* Augmente légèrement la taille de l'image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+  border: 20px solid red; /* Contour rouge autour de l'image */
+}
+
+/* Styles pour le texte */
+.news-card h3 {
+  color: black; /* Titre en noir */
+  font-size: 1.2em; /* Taille du titre */
+  margin-top: 10px; /* Ajouter un espace au-dessus du titre */
+}
+
+.news-card p,
+.news-card .news-details {
+  color: red; /* Texte en rouge pour la description */
+  font-size: 0.9em; /* Taille de la description */
+  margin: 10px 0; /* Ajouter un espace autour de la description */
+}
+
+.news-card .news-details {
+  display: block;
+  color: black; /* Lien en noir */
+  font-size: 0.9em; /* Taille du lien */
+  margin-top: auto; /* Pousser le lien vers le bas */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .news-card {
+    width: calc(50% - 20px); /* 2 cards in a row on iPad */
+  }
+}
+@media (max-width: 768px) {
+  .news-card {
+    width: 80%; /* 1 card per row on phone */
+    text-align: center; /* Centrer le texte sur mobile */
+  }
+  .news-card img {
+    width: 100%; /* L'image prendra toute la largeur de la carte */
+    margin: 10px auto; /* Centrer l'image avec un espace */
+  }
+  .news-card h3,
+  .news-card p,
+  .news-card .news-details {
+    width: auto; /* Laisser la largeur automatique */
+    margin-left: auto; /* Centrer le texte horizontalement */
+    margin-right: auto; /* Centrer le texte horizontalement */
+  }
+}
 body, html {
   height: 100%;
   margin: 0;
