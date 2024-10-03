@@ -242,6 +242,10 @@ footer {
   height: 24px;
 }
 
+footer p {
+  color: white;
+}
+
 .no1, .no2, .no4, .no3 {
   display: flex;
   justify-content: center;
@@ -446,7 +450,7 @@ h4 {
     text-align: left;
   }
   .card {
-    width: 100%;
+    width: 60%;
     max-width: none;
     height: 300px;
     margin: 0;
@@ -646,46 +650,44 @@ h4 {
   }
 }
 .en-vedette {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
   padding: 50px;
-  justify-content: center;
+  gap: 20px; /* Space between the columns */
   align-items: center;
 }
 
 .image-vedette {
   background-image: url("/Sources/medias/vedette.png");
   background-repeat: no-repeat;
-  width: 40%;
+  width: 100%; /* Full width of the grid column */
+  max-width: 400px; /* Set a max width to keep the image rectangular */
+  height: auto; /* Let the height adjust automatically to maintain aspect ratio */
+  aspect-ratio: 4/5; /* Keep the image rectangular (400px width, 500px height ratio) */
   border: 20px solid #E33216;
-  height: 300px;
   background-size: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background-position: center;
+  margin-left: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-vedette {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-
-.vedette {
-  display: flex;
-  align-items: center;
-  padding: 20px;
+  text-align: left; /* Align text to the left */
 }
 
 h8 {
   font-size: 1.5rem;
-  position: relative;
-  top: 0;
-  padding: 20px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-p {
-  font-size: 1.2rem;
+.para-vedette {
+  font-size: 2.5rem;
   color: black;
-  padding: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  text-align: left; /* Ensure text is aligned to the left */
 }
 
 .btn-vedette {
@@ -696,6 +698,8 @@ p {
   border: none;
   cursor: pointer;
   font-size: 1rem;
+  align-self: flex-start;
+  margin-top: 10px;
 }
 
 .btn-vedette:hover {
@@ -704,15 +708,23 @@ p {
 }
 
 @media (max-width: 768px) {
-  .vedette {
-    flex-direction: column;
-    align-items: center;
+  .en-vedette {
+    grid-template-columns: 1fr; /* Stack image and text on smaller screens */
+    padding: 20px; /* Reduce padding for smaller screens */
   }
-  .image {
-    width: 40%;
-    height: 300px;
-    margin-right: 0;
-    margin-bottom: 20px;
+  .image-vedette {
+    width: 100%;
+    height: auto; /* Maintain the aspect ratio for responsiveness */
+    max-width: 300px; /* Adjust max width for smaller screens */
+    aspect-ratio: 4/5; /* Keep it rectangular even on small screens */
+    margin-left: 0; /* Remove the left margin for mobile */
+    background-size: cover; /* Ensure the image fills the container */
+  }
+  .text-vedette {
+    text-align: center; /* Center text on smaller screens */
+  }
+  .btn-vedette {
+    align-self: center; /* Center button on smaller screens */
   }
 }
 body, html {
@@ -720,6 +732,10 @@ body, html {
   margin: 0;
   font-family: "Helvetica";
   padding: 0;
+}
+
+p {
+  color: white;
 }
 
 a {
