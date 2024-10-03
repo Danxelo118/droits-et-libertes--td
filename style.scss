@@ -1,6 +1,11 @@
 @use "partials/header";
 @use "partials/footer";
 @use "partials/text";
+@use "partials/info";
+@use "partials/listedoits";
+@use "partials/pub";
+@use "partials/actu";
+@use "partials/vedette";
 
 
 body, html {
@@ -9,16 +14,28 @@ body, html {
     background-color: $primary;
     font-family: 'Helvetica';
     padding: 0;
+
+
+    
 }
+ 
 
 a {
-    color: red;
+    color: #E33216;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-}
+} 
+
+
+
+
+
+
+
+
 
 
 

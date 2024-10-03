@@ -32,7 +32,31 @@ footer {
     gap: 10px;
 }
 
-.no1, .no2, .no3 {
+.social-media {
+    margin-top: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.social-media a {
+    color: #E33216; 
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #FBCC3C; 
+}
+
+.social-media svg {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+.no1, .no2, .no4, .no3  {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -78,6 +102,36 @@ footer {
   
 }
 
+.mission, .publications {
+    display: none; 
+}
+
+
+.contact-info {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.no3 {
+    justify-content: center; 
+}
+
+
+
+a {
+color: red;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+
+
 
 @media (min-width: 769px) {
     .footer-container {
@@ -90,6 +144,13 @@ footer {
         gap: 10px;
         text-align: left; 
     }
+
+
+    .mission, .publications {
+        display: block; 
+    }
+
+
 
     .footer-buttons {
         display: flex;
@@ -117,7 +178,6 @@ footer {
 
     .no2 {
         grid-area: no2;
-        margin-top:-14em;
         justify-content: flex-end;
         flex-direction: row; 
         gap: 10px;
@@ -139,24 +199,5 @@ footer {
         justify-content: center;
     }
 }
-
-@media (max-width: 768px) {
-    .mission, .publications {
-        display: none; 
-    }
-
-    .contact-info {
-        align-items: center;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .no3 {
-        justify-content: center; 
-    }
-}
-
 
 
