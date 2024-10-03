@@ -222,7 +222,28 @@ footer {
   gap: 10px;
 }
 
-.no1, .no2, .no3 {
+.social-media {
+  margin-top: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.social-media a {
+  color: #E33216;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #FBCC3C;
+}
+
+.social-media svg {
+  width: 24px;
+  height: 24px;
+}
+
+.no1, .no2, .no4, .no3 {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -267,6 +288,31 @@ footer {
   align-items: center;
 }
 
+.mission, .publications {
+  display: none;
+}
+
+.contact-info {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.no3 {
+  justify-content: center;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 769px) {
   .footer-container {
     grid-template-areas: "no1 buttons ." "no1 no2 no4" "no3 no3 no3";
@@ -274,6 +320,9 @@ footer {
     grid-template-rows: 1fr 2fr 1fr;
     gap: 10px;
     text-align: left;
+  }
+  .mission, .publications {
+    display: block;
   }
   .footer-buttons {
     display: flex;
@@ -297,7 +346,6 @@ footer {
   }
   .no2 {
     grid-area: no2;
-    margin-top: -14em;
     justify-content: flex-end;
     flex-direction: row;
     gap: 10px;
@@ -317,30 +365,6 @@ footer {
     justify-content: center;
   }
 }
-@media (max-width: 768px) {
-  .mission, .publications {
-    display: none;
-  }
-  .contact-info {
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .no3 {
-    justify-content: center;
-  }
-}
-a {
-  color: red;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 p {
   color: white;
 }
@@ -482,6 +506,66 @@ h4 {
   position: relative;
 }
 
+.en-vedette {
+  display: flex;
+  justify-content: center;
+  background-image: url("/Sources/medias/vedette.png");
+  align-items: center;
+}
+
+.image-vedette {
+  background-image: url("/Sources/medias/vedette.png");
+  border: 10px solid #E33216;
+  height: 300px;
+  background-size: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vedette {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+h8 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-vedette {
+  padding: 10px 20px;
+  background-color: #FF5733;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-vedette:hover {
+  background-color: #FF321A;
+}
+
+@media (max-width: 768px) {
+  .vedette {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
 body, html {
   height: 100%;
   margin: 0;
@@ -490,7 +574,7 @@ body, html {
 }
 
 a {
-  color: red;
+  color: #E33216;
   text-decoration: none;
 }
 
