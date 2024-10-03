@@ -15,35 +15,36 @@
 
 .bullet-item {
     font-size: 2.5em;
-    opacity: 0; /* Commencer invisible */
-    transform: translateY(20px); /* Déplacer vers le bas */
-    position: absolute; /* Pour superposer les éléments */
+    opacity: 0;
+    transform: translateY(20px);
+    position: absolute;
     margin-top: -150px;
 }
 
 .title {
-    text-align: center; /* Centre le texte */
-    font-size: 3em; /* Taille de police */
-    color: #333; /* Couleur du texte */
-    margin-bottom: 20px; /* Espacement en dessous du texte */
+    text-align: center;
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
     margin-top: 100px;
-    font-family: 'Helvetica', sans-serif; /* Utiliser la police Helvetica */
-    font-weight: 300; /* Poids de la police plus léger */
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 300;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
     .bullet-item {
-        font-size: 1.5em; /* Réduire la taille des éléments de la liste */
-        margin-top: -100px; /* Ajuster la position si nécessaire */
+        font-size: 1.5em;
+        margin-top: -100px;
     }
 
     .title {
-        font-size: 2em; /* Réduire la taille du titre */
-        margin-top: 50px; /* Ajuster la marge supérieure pour le centrer */
-        margin-left: 0; /* Annuler le décalage à gauche */
+        font-size: 2em;
+        margin-top: 50px;
+        margin-left: 0;
     }
 }
+
 
 
 

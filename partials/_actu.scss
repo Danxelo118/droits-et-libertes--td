@@ -9,12 +9,11 @@
 }
 
 .news-image {
-    width: 100%; /* Prend 100% de la largeur de son conteneur */
-    height: auto; /* Garde le ratio de l'image */
-    max-width: 100%; /* Ne dépasse pas la largeur de son conteneur */
-    display: block; /* Évite l'espace en bas de l'image */
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
 }
-
 
 .news-cards {
     display: flex;
@@ -25,119 +24,116 @@
 }
 
 .news-card {
-    background: transparent; /* Pas de contour */
+    background: transparent;
     border-radius: 8px;
     overflow: hidden;
-    width: calc(33.33% - 20px); /* 3 cards in a row on desktop */
-    text-align: left; /* Aligner le texte à gauche */
-    display: flex; /* Utiliser flexbox */
-    flex-direction: column; /* Aligner les éléments en colonne */
-    justify-content: space-between; /* Espace entre les éléments */
+    width: calc(33.33% - 20px);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .news-card img {
-    width: 80%; /* Réduire la taille de l'image à 80% de la largeur de la carte */
+    width: 80%;
     height: auto;
-    margin: 10px 0; /* Ajouter un espace en haut et en bas de l'image */
+    margin: 10px 0;
     transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
 }
 
-/* Effet de survol pour l'image */
 .news-card:hover img {
-    transform: scale(1.00); /* Augmente légèrement la taille de l'image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
-    border: 20px solid red; /* Contour rouge autour de l'image */
+    transform: scale(1.00);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 20px solid red;
 }
 
-/* Styles pour le texte */
 .news-card h3 {
-    color: black; /* Titre en noir */
-    font-size: 1.2em; /* Taille du titre */
-    margin-top: 10px; /* Ajouter un espace au-dessus du titre */
+    color: black;
+    font-size: 1.2em;
+    margin-top: 10px;
     width: 80%;
 }
 
 .news-card p,
 .news-card .news-details {
-    color: #E33216; /* Texte en rouge pour la description */
-    font-size: 0.9em; /* Taille de la description */
-    margin: 10px 0; /* Ajouter un espace autour de la description */
+    color: #E33216;
+    font-size: 0.9em;
+    margin: 10px 0;
     width: 80%;
 }
 
 .news-card .news-details {
     display: block;
-    color: black; /* Lien en noir */
-    font-size: 0.9em; /* Taille du lien */
-    margin-top: auto; /* Pousser le lien vers le bas */
+    color: black;
+    font-size: 0.9em;
+    margin-top: auto;
 }
 
-/* Responsive styles */
 @media (max-width: 1024px) {
     .news-card {
-        width: calc(50% - 20px); /* 2 cards in a row on iPad */
+        width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 768px) {
     .news-card {
-        width: 80%; /* 1 card per row on phone */
-        text-align: center; /* Centrer le texte sur mobile */
+        width: 80%;
+        text-align: center;
     }
-    
+
     .news-card img {
-        width: 100%; /* L'image prendra toute la largeur de la carte */
-        margin: 10px auto; /* Centrer l'image avec un espace */
+        width: 100%;
+        margin: 10px auto;
     }
 
     .news-card h3,
     .news-card p,
     .news-card .news-details {
-        width: auto; /* Laisser la largeur automatique */
-        margin-left: auto; /* Centrer le texte horizontalement */
-        margin-right: auto; /* Centrer le texte horizontalement */
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 .news-section {
-    position: relative; /* Ensure the header is positioned correctly */
+    position: relative;
 }
 
 .image-container {
-    position: relative; /* Container for the image and titles */
+    position: relative;
 }
 
 .news-image {
     max-width: 100%;
     height: auto;
-    display: block; /* Ensure image is block-level */
+    display: block;
 }
 
 .title-red, .title-yellow {
-    position: absolute; /* Position titles absolutely */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    text-align: center; /* Center text */
-    color: white; /* Default text color */
-    font-size: 9em; /* Adjust size */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 9em;
 }
 
 .title-red {
-    top: 20%; /* Position red title */
-    color: #E33216; /* Red color */
+    top: 20%;
+    color: #E33216;
 }
 
 .title-yellow {
-    top: 20%; /* Position yellow title */
-    color: #FBCC3C; /* Yellow color */
+    top: 20%;
+    color: #FBCC3C;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .title-red, .title-yellow {
-        font-size: 2em; /* Smaller titles on mobile */
+        font-size: 2em;
     }
 }
+
 
 
 
