@@ -5,9 +5,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    
- 
-  
 }
 
 .bullet-list {
@@ -25,14 +22,27 @@
 }
 
 .title {
-    text-align: left; /* Centre le texte */
+    text-align: center; /* Centre le texte */
     font-size: 3em; /* Taille de police */
     color: #333; /* Couleur du texte */
     margin-bottom: 20px; /* Espacement en dessous du texte */
     margin-top: 100px;
-    margin-left: 200px;
     font-family: 'Helvetica', sans-serif; /* Utiliser la police Helvetica */
     font-weight: 300; /* Poids de la police plus léger */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .bullet-item {
+        font-size: 1.5em; /* Réduire la taille des éléments de la liste */
+        margin-top: -100px; /* Ajuster la position si nécessaire */
+    }
+
+    .title {
+        font-size: 2em; /* Réduire la taille du titre */
+        margin-top: 50px; /* Ajuster la marge supérieure pour le centrer */
+        margin-left: 0; /* Annuler le décalage à gauche */
+    }
 }
 
 

@@ -9,15 +9,19 @@
 }
 
 .news-image {
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Prend 100% de la largeur de son conteneur */
+    height: auto; /* Garde le ratio de l'image */
+    max-width: 100%; /* Ne dépasse pas la largeur de son conteneur */
+    display: block; /* Évite l'espace en bas de l'image */
 }
+
 
 .news-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    margin-top: 30px;
 }
 
 .news-card {
@@ -50,13 +54,15 @@
     color: black; /* Titre en noir */
     font-size: 1.2em; /* Taille du titre */
     margin-top: 10px; /* Ajouter un espace au-dessus du titre */
+    width: 80%;
 }
 
 .news-card p,
 .news-card .news-details {
-    color: red; /* Texte en rouge pour la description */
+    color: #E33216; /* Texte en rouge pour la description */
     font-size: 0.9em; /* Taille de la description */
     margin: 10px 0; /* Ajouter un espace autour de la description */
+    width: 80%;
 }
 
 .news-card .news-details {
@@ -92,5 +98,46 @@
         margin-right: auto; /* Centrer le texte horizontalement */
     }
 }
+
+.news-section {
+    position: relative; /* Ensure the header is positioned correctly */
+}
+
+.image-container {
+    position: relative; /* Container for the image and titles */
+}
+
+.news-image {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensure image is block-level */
+}
+
+.title-red, .title-yellow {
+    position: absolute; /* Position titles absolutely */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    text-align: center; /* Center text */
+    color: white; /* Default text color */
+    font-size: 9em; /* Adjust size */
+}
+
+.title-red {
+    top: 20%; /* Position red title */
+    color: #E33216; /* Red color */
+}
+
+.title-yellow {
+    top: 20%; /* Position yellow title */
+    color: #FBCC3C; /* Yellow color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .title-red, .title-yellow {
+        font-size: 2em; /* Smaller titles on mobile */
+    }
+}
+
 
 

@@ -37,8 +37,39 @@ items.forEach((item, index) => {
     );
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
 
+    // Animate the red title
+    gsap.fromTo(".title-red", 
+        { y: 0 }, // Start position
+        { 
+            y: -40, 
+            duration: 1, // Increase duration for a smoother effect
+            scrollTrigger: {
+                trigger: ".title-red", // Element that triggers the animation
+                start: "top 30%", // Start when the title is 30% down the viewport
+                end: "top 80%", // End when the title is 80% down the viewport
+                scrub: 1, // Smooth scrubbing with a duration of 1 second
+                markers: true // Uncomment for debugging
+            }
+        }
+    );
 
-
-
-
+    // Animate the yellow title
+    gsap.fromTo(".title-yellow", 
+        { y: 0 }, // Start position
+        { 
+            y: 40, 
+            duration: 1, // Increase duration for a smoother effect
+            scrollTrigger: {
+                trigger: ".title-yellow", // Element that triggers the animation
+                start: "top 30%", // Start when the title is 30% down the viewport
+                end: "top 80%", // End when the title is 80% down the viewport
+                scrub: 1, // Smooth scrubbing with a duration of 1 second
+                markers: true // Uncomment for debugging
+            }
+        }
+    );
+});
