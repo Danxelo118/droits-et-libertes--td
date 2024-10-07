@@ -1,30 +1,39 @@
 .en-vedette {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    display: flex;
+    grid-template-columns: 1fr 1fr; 
+    justify-content: center;
     padding: 50px;
-    gap: 20px; /* Space between the columns */
+    gap: 40px; 
     align-items: center;
 }
 
 .image-vedette {
-    background-image: url("/Sources/medias/vedette.png");
+    background-image: url("../Sources/medias/vedette.png");
+    display: flex;
+    justify-content: flex-end;
     background-repeat: no-repeat;
-    width: 100%; /* Full width of the grid column */
-    max-width: 400px; /* Set a max width to keep the image rectangular */
-    height: auto; /* Let the height adjust automatically to maintain aspect ratio */
-    aspect-ratio: 4/5; /* Keep the image rectangular (400px width, 500px height ratio) */
-    border: 20px solid #E33216;
+    width: 100%; 
+    max-width: 400px;
+    height: auto; 
+    aspect-ratio: 4/5; 
+    border: 50px solid #E33216;
     background-size: cover;
     background-position: center;
     margin-left: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.image-vedette:hover {
+    transform: scale(1.00);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 0px solid red;
+}
+
 .text-vedette {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
 }
 
 h8 {
@@ -33,10 +42,10 @@ h8 {
 }
 
 .para-vedette {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: black;
     margin-bottom: 20px;
-    text-align: left; /* Ensure text is aligned to the left */
+    text-align: left; 
 }
 
 .btn-vedette {
@@ -75,6 +84,11 @@ h8 {
     .text-vedette {
         text-align: center; /* Center text on smaller screens */
     }
+
+    .para-vedette {
+        font-size: 1.5rem;
+    }
+
 
     .btn-vedette {
         align-self: center; /* Center button on smaller screens */
