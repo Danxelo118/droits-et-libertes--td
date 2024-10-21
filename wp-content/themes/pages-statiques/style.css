@@ -389,7 +389,7 @@ a:hover {
 .info {
   margin: 0 auto;
   width: 100%;
-  background-image: url("/Sources/medias/info-background.jpg");
+  background-image: url("/wp-content/themes/pages-statiques/Sources/medias/info-background.jpg");
   background-size: cover;
   background-position: center;
   padding-bottom: 40px;
@@ -671,7 +671,7 @@ a:hover {
 }
 
 .image-vedette {
-  background-image: url("../Sources/medias/vedette.png");
+  background-image: url("/wp-content/themes/pages-statiques/Sources/medias/vedette.png");
   display: flex;
   justify-content: flex-end;
   background-repeat: no-repeat;
