@@ -752,6 +752,59 @@ h8 {
     align-self: center; /* Center button on smaller screens */
   }
 }
+.news-section-services {
+  background-color: #FBCC3C;
+}
+
+.news-section-services h2 {
+  position: relative;
+  top: 0;
+  padding: 30px;
+  margin: 50px;
+  text-align: left;
+  color: red;
+  font-weight: 600;
+}
+
+.title-sante {
+  position: absolute;
+  padding: 30px;
+  margin: 30px;
+  top: 100px;
+  left: 0;
+  text-align: center;
+  font-size: 8em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #E33216;
+}
+
+.sante-hero {
+  filter: grayscale(100%);
+  mix-blend-mode: overlay;
+}
+
+.paragraph-services p {
+  display: flex;
+  font-size: 30px;
+  text-align: center;
+  margin: 50px;
+  padding: 20px;
+  color: black;
+}
+
+.autres-services img {
+  width: 50%;
+  height: auto;
+  max-width: 100%;
+  border: 10px solid red;
+  padding: 50px;
+  margin: 0 auto;
+  display: block;
+}
+
 body, html {
   height: 100%;
   margin: 0;
