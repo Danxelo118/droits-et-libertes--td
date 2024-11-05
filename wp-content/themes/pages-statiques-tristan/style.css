@@ -861,10 +861,9 @@ h8 {
   position: absolute;
   padding: 30px;
   margin: 30px;
-  margin-left: 120px;
   margin-top: 80px;
   top: 100px;
-  font-size: 4vw;
+  font-size: 5vw;
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
@@ -874,19 +873,6 @@ h8 {
 }
 
 /* Main Header Styles */
-.main-header {
-  position: relative;
-  z-index: 1;
-}
-
-.brand-link {
-  display: inline-block;
-}
-
-.site-logo {
-  width: 150px; /* Adjust logo size as necessary */
-}
-
 .main-title {
   font-size: 2.6em;
   color: #E33216;
@@ -896,43 +882,14 @@ h8 {
   z-index: 100;
 }
 
-.site-navbar {
-  background-color: #333; /* Adjust for navbar color */
-}
-
-/* Button Styles */
-.header-actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.donate-btn, .member-btn {
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 5px;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-
-.donate-btn {
-  background-color: #E33216;
-  color: white;
-}
-
-.member-btn {
-  background-color: #4CAF50;
-  color: white;
-}
-
 /* Yellow Info Block */
 .info-block {
   padding: 20px;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 300px;
+  z-index: 100;
+  margin-top: 350px;
 }
 
 .info-container {
