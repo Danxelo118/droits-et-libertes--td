@@ -949,7 +949,7 @@ h8 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 600px;
+  max-width: 750px;
   margin: 0 auto;
 }
 
