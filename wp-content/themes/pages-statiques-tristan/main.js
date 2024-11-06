@@ -71,4 +71,21 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     );
 });
+const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    on: {
+        slideChange: function () {
+            const currentSlide = swiper.realIndex + 1;
+            const totalSlides = swiper.slides.length - 2;
+            document.getElementById('slide-counter').innerText = `${currentSlide} / ${totalSlides}`;
+        },
+    },
+});
+
+
+
 
