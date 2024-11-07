@@ -800,7 +800,7 @@ h8 {
   padding: 30px;
   margin: 50px;
   text-align: left;
-  color: red;
+  color: #E33216;
   font-weight: 600;
 }
 
@@ -1031,6 +1031,79 @@ h8 {
     max-width: 800px;
   }
 }
+.mission-hero {
+  position: absolute;
+  max-width: 70%;
+  height: auto;
+  padding: 30px;
+  margin: 30px;
+  top: 60%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1em;
+  background-color: #FBCC3C;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.mission-hero p {
+  color: #000;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.contacter {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  margin: 50px;
+  padding: 20px;
+}
+
+.contacter p {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.contacter h2 {
+  font-size: 2em;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.contacter button {
+  padding: 10px;
+  background-color: #E33216;
+  color: #000;
+  border-radius: 3px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.contacter button:hover {
+  background-color: yellow;
+}
+
+.contact-membre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #FBCC3C;
+}
+
 body, html {
   height: 100%;
   margin: 0;
