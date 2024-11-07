@@ -73,7 +73,7 @@
 .news-card-image {
     width: 100%;
     height: auto;
-    max-height: 200px; /* Optional: Set max height for images to maintain consistency */
+    max-height: 200px;
 }
 
 .news-card-body {
@@ -81,7 +81,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1; /* Allow the body to expand and take available space */
+    flex-grow: 1; 
 }
 
 .news-card-title {
@@ -94,7 +94,7 @@
     font-size: 1rem;
     color: #666;
     margin-top: 10px;
-    flex-grow: 1; /* Allow description to grow and take available space */
+    flex-grow: 1;
 }
 
 .news-card-date {
@@ -109,8 +109,8 @@
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    margin-top: auto; /* Pushes button to the bottom */
-    align-self: flex-start; /* Align button to the left */
+    margin-top: auto; 
+    align-self: flex-start; 
     margin-top: 20px;
     cursor: pointer;
 }

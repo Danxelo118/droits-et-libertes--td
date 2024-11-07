@@ -1350,6 +1350,58 @@ h8 {
   background-color: #FBCC3C;
 }
 
+.contact-form {
+  padding: 40px;
+  background-color: #F4F4F4;
+  margin: 50px 0;
+  border-radius: 8px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form button.btn-submit {
+  background-color: #E33216;
+  color: #FFF;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.contact-form button.btn-submit:hover {
+  background-color: #FBCC3C;
+  color: #000;
+}
+
 .actualites-hub {
   padding: 60px 20px;
   background-color: #f5f5f5;
@@ -1424,7 +1476,7 @@ h8 {
 .news-card-image {
   width: 100%;
   height: auto;
-  max-height: 200px; /* Optional: Set max height for images to maintain consistency */
+  max-height: 200px;
 }
 
 .news-card-body {
@@ -1432,7 +1484,7 @@ h8 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-grow: 1; /* Allow the body to expand and take available space */
+  flex-grow: 1;
 }
 
 .news-card-title {
@@ -1445,7 +1497,7 @@ h8 {
   font-size: 1rem;
   color: #666;
   margin-top: 10px;
-  flex-grow: 1; /* Allow description to grow and take available space */
+  flex-grow: 1;
 }
 
 .news-card-date {
@@ -1460,8 +1512,8 @@ h8 {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  margin-top: auto; /* Pushes button to the bottom */
-  align-self: flex-start; /* Align button to the left */
+  margin-top: auto;
+  align-self: flex-start;
   margin-top: 20px;
   cursor: pointer;
 }
