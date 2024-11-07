@@ -7,22 +7,16 @@
     position: absolute;
     padding: 30px;
     margin: 30px;
-
     margin-top: 80px;
     top: 100px;
-   
-    font-size: 5vw; 
+    font-size: 5vw;
     font-weight: bold;
-    white-space: nowrap; 
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     color: #E33216;
     z-index: 10;
 }
-
-
-/* Main Header Styles */
-
 
 .main-title {
     font-size: 2.6em;
@@ -39,7 +33,6 @@
     justify-content: flex-start;
     font-size: 1em;
     color: black;
-
 }
 
 .social-share span {
@@ -49,10 +42,9 @@
 }
 
 .social-icon {
-    width: 20px; /* Adjust the size of the icons */
+    width: 20px;
     height: 20px;
     margin-left: 10px;
-
 }
 
 .social-icon img {
@@ -62,17 +54,15 @@
 
 .social-icon.instagram img {
     width: 100%;
-    max-width: 20px; /* Keep them small */
-
+    max-width: 20px;
 }
 
 .paragraph-nouvelles p {
     display: flex;
     font-size: 30px;
-   
     margin: 50px;
     padding: 20px;
-    color:black;
+    color: black;
 }
 
 .liste-nouvelles {
@@ -81,19 +71,18 @@
     justify-content: center;
     margin: 50px;
     padding: 20px;
-    color:black;
+    color: black;
 }
 
 .social-icon.x img {
     width: 100%;
-    max-width: 20px; /* Keep them small */
+    max-width: 20px;
 }
 
 .social-icon.facebook img {
     width: 100%;
-    max-width: 20px; /* Keep them small */
+    max-width: 20px;
 }
-
 
 .news-section-nouvelles {
     background-color: #FBCC3C;
@@ -101,25 +90,21 @@
 
 .news-section-nouvelles h2 {
     position: relative;
-    top:0;
+    top: 0;
     padding: 30px;
     margin: 50px;
-    text-align:left;
+    text-align: left;
     color: #E33216;
     font-weight: 600;
 }
 
-
-/* Yellow Info Block */
 .info-block {
-
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     z-index: 100;
     margin-top: 350px;
-
 }
 
 .info-container {
@@ -180,7 +165,6 @@
     height: auto;
 }
 
-
 .new-section {
     margin-top: 60px;
     padding: 0px 80px;
@@ -190,14 +174,12 @@
     color: #E33216;
     font-size: 2.5rem;
     font-weight: bold;
-
 }
 
 .section-title2 {
     color: black;
     font-size: 2.5rem;
     font-weight: bold;
-
 }
 
 .section-text {
@@ -205,7 +187,6 @@
     line-height: 1.6;
     font-weight: 300;
     margin-top: 20px;
-
     color: black;
 }
 
@@ -219,7 +200,6 @@
     height: auto;
     border: 15px solid #E33216;
     box-sizing: border-box;
-
 }
 
 .full-width-image {
@@ -229,16 +209,15 @@
 
 .author-cards {
     display: flex;
-    flex-direction: column;  /* Stack the cards vertically */
-    gap: 20px;  /* Add space between each card */
+    flex-direction: column;
+    gap: 20px;
 }
 
 .author-card {
     display: flex;
-    width: 100%;  /* Full width for each card */
+    width: 100%;
     background-color: #A5A5A5;
     border: 1px solid #ddd;
-
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
@@ -246,9 +225,8 @@
 }
 
 .author-card img {
-    width: 70px;  /* Fixed size for the image */
+    width: 70px;
     height: 70px;
-;
     margin-right: 15px;
 }
 
@@ -268,35 +246,33 @@
 }
 
 .author-card:hover {
-    transform: scale(1.02);  /* Scale up the card slightly */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);  /* Increase shadow intensity */
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Slide counter style */
 #slide-counter {
     font-weight: bold;
     font-size: 16px;
     color: #000;
-    padding: 0 20px;  /* Add horizontal padding to separate from the arrows */
-    margin: 0 40px;  /* Add space between the counter and the arrows */
-    text-align: center;  /* Center the counter text */
+    padding: 0 20px;
+    margin: 0 40px;
+    text-align: center;
 }
 
-/* Style for the swiper navigation buttons */
-.swiper-navigation {
+.swiper-navigation2 {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.swiper-button-prev2,
+.swiper-button-next2 {
     background-color: red;
     color: #000;
     margin: 10px;
     position: relative;
-    width: 200px; /* Larger width than height */
+    width: 200px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -307,49 +283,47 @@
     text-align: center;
 }
 
-.swiper-button-next:hover {
-    background-color: #e33216;  /* Couleur de fond au survol (plus foncé) */
-    color: white; /* Change la couleur du texte au survol */
-    transform: scale(1.1); /* Agrandit légèrement le bouton */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+.swiper-button-next2:hover {
+    background-color: #e33216;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-.swiper-button-prev {
-    margin-right: 30px;  /* Add space to the right of the previous button */
-}
-.swiper-button-prev:hover {
-    background-color: #e33216;  /* Couleur de fond au survol (plus foncé) */
-    color: white; /* Change la couleur du texte au survol */
-    transform: scale(1.1); /* Agrandit légèrement le bouton */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
-}
-.swiper-button-next {
-    margin-left: 30px;  /* Add space to the left of the next button */
+.swiper-button-prev2 {
+    margin-right: 30px;
 }
 
-/* Modify the arrows inside the buttons */
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.swiper-button-prev2:hover {
+    background-color: #e33216;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-next2 {
+    margin-left: 30px;
+}
+
+.swiper-button-prev2::after,
+.swiper-button-next2::after {
     font-size: 12px;
-    display: none;  /* Remove the default arrows */
+    display: none;
 }
 
-/* Position the "Service précédent" and "Service suivant" buttons further left and right */
-.swiper-button-prev {
+.swiper-button-prev2 {
     position: absolute;
-    left: 100px;  /* Move the button to the left */
+    left: 100px;
 }
 
-.swiper-button-next {
+.swiper-button-next2 {
     position: absolute;
-    right: 100px;  /* Move the button to the right */
+    right: 100px;
 }
 
-/* Optional: style for custom section */
-.custom-section {
+.custom-section2 {
     position: relative;
-    height: 0px;  /* Adjust the height based on your design */
+    height: 0px;
     margin-top: 80px;
 }
 
@@ -361,18 +335,15 @@
     z-index: 2;
     color: #E33216;
     text-align: center;
-    background-color: transparent; /* Optional translucent background */
+    background-color: transparent;
     padding: 10px 20px;
     border-radius: 8px;
 }
 
 .yes {
-margin-top: -50px;
-
+    margin-top: -50px;
 }
 
-
-/* Desktop Version */
 @media (min-width: 768px) {
     .info-block {
         padding: 40px 60px;
@@ -384,15 +355,6 @@ margin-top: -50px;
 }
 
 @media (max-width: 500px) {
-
     .title-nouvelle {
-
-       
-   
-    
     }
-
 }
-
-
-
