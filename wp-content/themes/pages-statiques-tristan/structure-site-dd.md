@@ -1,0 +1,65 @@
+# Acceuil
+
+## TYPE DE CONTENU (POST TYPE)
+
+## MODÈLE (TEMPLATE)
+
+## COMPOSANTES
+### home.php
+### CHAMPS PERSONNALISÉS
+
+## AUTRES CHAMPS PERSONNALISÉS
+
+
+# Nouvelles
+
+## TYPE DE CONTENU (POST TYPE)
+
+## page.php
+
+## COMPOSANTES
+### news-hub.php
+### CHAMPS PERSONNALISÉS
+
+## AUTRES CHAMPS PERSONNALISÉS
+
+
+# Nouvelles
+
+## TYPE DE CONTENU (POST TYPE)
+
+## page.php
+
+## COMPOSANTES
+### news-hub.php
+### CHAMPS PERSONNALISÉS
+
+## AUTRES CHAMPS PERSONNALISÉS
+
+
+# Services
+
+## TYPE DE CONTENU (POST TYPE)
+
+## page
+
+## COMPOSANTES
+### services.php
+### CHAMPS PERSONNALISÉS
+
+## AUTRES CHAMPS PERSONNALISÉS
+
+
+
+
+# Contact
+
+## TYPE DE CONTENU (POST TYPE)
+
+## page.php
+
+## COMPOSANTES
+### contact.php
+### CHAMPS PERSONNALISÉS
+
+## AUTRES CHAMPS PERSONNALISÉS
