@@ -1,17 +1,19 @@
 # Acceuil
 
-## TYPE DE CONTENU (POST TYPE)
+## home
 
-## MODÈLE (TEMPLATE)
-
-## COMPOSANTES
-### home.php
-### CHAMPS PERSONNALISÉS
-
-## AUTRES CHAMPS PERSONNALISÉS
+## page.php
 
 
-# Nouvelles
+### acceuil.php
+### section-titre
+### section-description
+### background-image
+
+
+
+
+# Liste Nouvelles
 
 ## TYPE DE CONTENU (POST TYPE)
 
@@ -24,7 +26,7 @@
 ## AUTRES CHAMPS PERSONNALISÉS
 
 
-# Nouvelles
+# Page Nouvelles
 
 ## TYPE DE CONTENU (POST TYPE)
 
@@ -63,3 +65,4 @@
 ### CHAMPS PERSONNALISÉS
 
 ## AUTRES CHAMPS PERSONNALISÉS
+
