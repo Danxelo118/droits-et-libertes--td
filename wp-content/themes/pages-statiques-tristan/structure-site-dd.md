@@ -19,15 +19,15 @@
 ### news-article.php
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-#### hero
+#### hero.php
 ### CHAMPS PERSONNALISÉS
 ##### title: text
 ### CHAMPS PERSONNALISÉS
+##### image
 ##### description: text-area
  
 
 
- 
  
 # Liste de nouvelles
 ## TYPE DE CONTENU (POST TYPE)
@@ -37,10 +37,11 @@
 ### news-hub.php
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-#### hero
+#### hero.php
 ### CHAMPS PERSONNALISÉS
 ##### title: text
 ### CHAMPS PERSONNALISÉS
+##### image
 ##### description: text-area
  
  
@@ -54,10 +55,11 @@
 ### service.php
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-#### hero
+#### hero.php
 ### CHAMPS PERSONNALISÉS
 ##### title: text
 ### CHAMPS PERSONNALISÉS
+##### image
 ##### description: text-area
  
 
@@ -66,15 +68,15 @@
 ## TYPE DE CONTENU (POST TYPE)
 ### page
  
-
 ## MODÈLE (TEMPLATE)
 ### services-hub.php
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-#### hero
+#### hero.php
 ### CHAMPS PERSONNALISÉS
 ##### title: text
 ### CHAMPS PERSONNALISÉS
+##### image
 ##### description: text-area
  
 
@@ -86,7 +88,7 @@
 ### contact-us.php
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-#### hero
+#### hero.php
 ### CHAMPS PERSONNALISÉS
 ##### title: text
 ### CHAMPS PERSONNALISÉS
