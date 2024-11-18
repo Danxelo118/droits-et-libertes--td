@@ -1,68 +1,94 @@
-# Acceuil
-
-## home
-
-## page.php
-
-
-### acceuil.php
-### section-titre
-### section-description
-### background-image
-
-
-
-
-# Liste Nouvelles
-
+# Accueil
 ## TYPE DE CONTENU (POST TYPE)
+### page
+ 
+## MODÈLE (TEMPLATE)
+### home.php
+ 
+## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+### testimony: text-area
+ 
 
-## page.php
-
-## COMPOSANTES
-### news-hub.php
-### CHAMPS PERSONNALISÉS
-
-## AUTRES CHAMPS PERSONNALISÉS
-
-
-# Page Nouvelles
-
+ 
+ 
+# Nouvelles
 ## TYPE DE CONTENU (POST TYPE)
-
-## page.php
-
-## COMPOSANTES
-### news-hub.php
+### page
+ 
+## MODÈLE (TEMPLATE)
+### news-article.php
+## COMPOSANTE DE LA PAGES
+### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+#### hero
 ### CHAMPS PERSONNALISÉS
+##### title: text
+### CHAMPS PERSONNALISÉS
+##### description: text-area
+ 
 
-## AUTRES CHAMPS PERSONNALISÉS
+
+ 
+ 
+# Liste de nouvelles
+## TYPE DE CONTENU (POST TYPE)
+### page
+ 
+## MODÈLE (TEMPLATE)
+### news-hub.php
+## COMPOSANTE DE LA PAGES
+### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+#### hero
+### CHAMPS PERSONNALISÉS
+##### title: text
+### CHAMPS PERSONNALISÉS
+##### description: text-area
+ 
+ 
 
 
 # Services
-
 ## TYPE DE CONTENU (POST TYPE)
-
-## page
-
-## COMPOSANTES
-### services.php
+### page
+ 
+## MODÈLE (TEMPLATE)
+### service.php
+## COMPOSANTE DE LA PAGES
+### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+#### hero
 ### CHAMPS PERSONNALISÉS
+##### title: text
+### CHAMPS PERSONNALISÉS
+##### description: text-area
+ 
 
-## AUTRES CHAMPS PERSONNALISÉS
 
+# Liste de services
+## TYPE DE CONTENU (POST TYPE)
+### page
+ 
 
-
+## MODÈLE (TEMPLATE)
+### services-hub.php
+## COMPOSANTE DE LA PAGES
+### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+#### hero
+### CHAMPS PERSONNALISÉS
+##### title: text
+### CHAMPS PERSONNALISÉS
+##### description: text-area
+ 
 
 # Contact
-
 ## TYPE DE CONTENU (POST TYPE)
-
-## page.php
-
-## COMPOSANTES
-### contact.php
+### page
+ 
+## MODÈLE (TEMPLATE)
+### contact-us.php
+## COMPOSANTE DE LA PAGES
+### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+#### hero
 ### CHAMPS PERSONNALISÉS
-
-## AUTRES CHAMPS PERSONNALISÉS
-
+##### title: text
+### CHAMPS PERSONNALISÉS
+##### description: text-area
+ 
