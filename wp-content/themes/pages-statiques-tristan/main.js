@@ -169,18 +169,35 @@ const loadNews = (sortOrder = 'desc') => {
 };
 
 // Handle "Voir plus de nouvelles" button click
-document.getElementById('load-more-btn').addEventListener('click', () => {
-    currentPage++;
-    loadNews(document.getElementById('news-sort').value);
-});
+//document.getElementById('load-more-btn').addEventListener('click', () => {
+//    currentPage++;
+//    loadNews(document.getElementById('news-sort').value);
+//});
 
 // Handle sorting change
-document.getElementById('news-sort').addEventListener('change', (e) => {
-    loadNews(e.target.value);
-});
+//document.getElementById('news-sort').addEventListener('change', (e) => {
+ //   loadNews(e.target.value);
+//});
 
 // Load initial news
-loadNews();
+//loadNews();
+
+
+window.onload = function() {
+    const banner = document.getElementById('promo-banner');
+    const closeButton = document.getElementById('close-banner');
+
+    if (localStorage.getItem('bannerClosed') === 'true') {
+        banner.style.display = 'none';
+    }
+
+
+    closeButton.onclick = function() {
+        banner.style.display = 'none';
+        localStorage.setItem('bannerClosed', 'true');
+    }
+};
+
 
 
 
