@@ -8,8 +8,9 @@
     padding: 30px;
     margin: 30px;
     margin-top: 80px;
+
     top: 100px;
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
@@ -99,12 +100,10 @@
 }
 
 .info-block {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 100;
-    margin-top: 350px;
+ position: absolute;
+ left: 60px;
+ right: 60px;
+ top: 60vh;
 }
 
 .info-container {
@@ -347,6 +346,7 @@
 @media (min-width: 768px) {
     .info-block {
         padding: 40px 60px;
+       
     }
 
     .info-container {
@@ -356,5 +356,12 @@
 
 @media (max-width: 500px) {
     .title-nouvelle {
+    }
+}
+
+@media (max-width: 800px) {
+    .info-block {
+       top:40vh;
+       
     }
 }
