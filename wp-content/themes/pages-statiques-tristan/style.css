@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Navbar Toggler */
 .navbar-toggler {
   border: none;
@@ -138,6 +139,36 @@
   display: flex;
   gap: 10px;
   z-index: 10;
+}
+
+/* Style pour la bannière promo */
+.promo-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6%;
+  background-color: #f1c40f;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.promo-banner a {
+  color: black;
+  text-decoration: underline;
+}
+
+#close-banner {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .header-buttons button {
