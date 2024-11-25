@@ -1314,8 +1314,9 @@ h8 {
   height: auto;
   padding: 30px;
   margin: 30px;
-  top: 60%;
-  transform: translateY(-50%);
+  top: 75%;
+  left: 0;
+  transform: translateY(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
