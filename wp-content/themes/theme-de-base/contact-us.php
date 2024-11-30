@@ -1,6 +1,6 @@
 <?php 
 /**
- * 	Template Name: À propos
+ * 	Template Name: contact-us
  * 	Identique à page, mais avec une barre latérale
  */
 

@@ -1,6 +1,6 @@
 <?php 
 /**
- * 	Template Name: À propos
+ * 	Template Name: news-article
  * 	Identique à page, mais avec une barre latérale
  */
 
