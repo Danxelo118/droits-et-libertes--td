@@ -1,7 +1,7 @@
 <?php 
 /**
  * 	Template Name: À propos
- * 	Template Post Type: post, page
+ * 	Identique à page, mais avec une barre latérale
  */
 
 get_header(); // Affiche header.php
@@ -26,6 +26,6 @@ else : // Si aucune page n'a été trouvée
 	get_template_part( 'partials/404' ); // Affiche partials/404.php
 endif;
 
-
+get_sidebar(); // Affiche le contenu de sidebar.php
 get_footer(); // Affiche footer.php 
 ?>
