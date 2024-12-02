@@ -829,7 +829,7 @@ h8 {
   position: relative;
   top: 0;
   padding: 30px;
-  margin: 50px;
+  margin: 30px;
   text-align: left;
   color: #E33216;
   font-weight: 600;
@@ -852,14 +852,6 @@ h8 {
 .sante-hero {
   filter: grayscale(100%);
   mix-blend-mode: overlay;
-}
-
-.paragraph-services p {
-  display: flex;
-  font-size: 30px;
-  margin: 50px;
-  padding: 20px;
-  color: black;
 }
 
 .liste-services {
