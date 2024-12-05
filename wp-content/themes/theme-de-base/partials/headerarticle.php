@@ -40,14 +40,19 @@
 
 <header>
 
-<div class="header">
+<div class="promo-banner" id="promo-banner">
+        <p><strong>Travail scolaire - <a href="https://liguedesdroits.ca/" target="_blank">Visitez le vrai site web</a></strong></p>
+        <button id="close-banner">X</button>
+    </div>
+
+    <div class="header">
         <a class="navbar-brand" href="./index.html">
             <img src="../pages-statiques-tristan/medias/logo.png" alt="Logo" class="logo" id="logo">
         </a>
-        
-        <img class="sante-hero" src="../pages-statiques-tristan/medias/sante-hero.jpg" alt="">
-        <div class="title-sante">DROIT À LA SANTÉ</div>
-    
+        <div class="overlay-text3"></div>
+        <img src="../pages-statiques-tristan/medias/fond.png" alt="">
+        <img src="../pages-statiques-tristan/medias/new1bw.png" class="nouvelle-hero" alt="">
+        <div class="title-nouvelle">POUR L’INTERDICTION DES <br> INTERPELLATIONS POLICIÈRES <br> UNE BONNE FOIS POUR TOUTE</div>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -67,6 +72,7 @@
                             <a class="dropdown-item" href="#">Droits des peuples autochtones</a>
                             <a class="dropdown-item" href="#">Environnement et droits humains</a>
                             <a class="dropdown-item" href="#">Liberté d’expression</a>
+                            <a class="dropdown-item" href="#">Palestine et droits humains</a>
                             <a class="dropdown-item" href="#">Palestine et droits humains</a>
                             <a class="dropdown-item" href="#">Police et mécanismes de surveillance</a>
                             <a class="dropdown-item" href="#">Racisme & exclusion sociale</a>
@@ -137,8 +143,32 @@
              
             </button>
         </div>
-        
-    </div>
+        <section class="info-block">
+                <div class="info-container">
+                    <div class="info-content">
+                        <p class="info-description">
+                            La Ligue des droits et libertés salue ce jugement déterminant dans la lutte au profilage racial à Montréal. 
+                            Pour le respect des droits humains, c’est maintenant à la Ville de Montréal d’agir en interdisant les interpellations policières, 
+                            une bonne fois pour toute!
+                        </p>
+                        <div class="info-footer">
+                            <span class="info-date"><i>4 septembre 2024</i></span>
+                            <div class="social-share">
+                                <span>PARTAGER: </span>
+                                <a href="https://www.instagram.com" class="social-icon instagram" target="_blank">
+                                    <img src="../pages-statiques-tristan/medias/facebook-app-symbol 1.png" alt="Instagram" />
+                                </a>
+                                <a href="https://twitter.com" class="social-icon x" target="_blank">
+                                    <img src="../pages-statiques-tristan/medias/instagram 1.png" alt="X" />
+                                </a>
+                                <a href="https://www.facebook.com" class="social-icon facebook" target="_blank">
+                                    <img src="../pages-statiques-tristan/medias/twitter 1.png" alt="Facebook" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 </header>
 
