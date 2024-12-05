@@ -47,12 +47,12 @@
 
     <div class="header">
         <a class="navbar-brand" href="./index.html">
-            <img src="../pages-statiques-tristan/medias/logo.png" alt="Logo" class="logo" id="logo">
+            <img src="<?php bloginfo('template_url');?>../theme-de-base/medias/logo.png" alt="Logo" class="logo" id="logo"> 
         </a>
         <div class="overlay-text3"></div>
         <img src="../pages-statiques-tristan/medias/fond.png" alt="">
-        <img src="../pages-statiques-tristan/medias/new1bw.png" class="nouvelle-hero" alt="">
-        <div class="title-nouvelle">POUR L’INTERDICTION DES <br> INTERPELLATIONS POLICIÈRES <br> UNE BONNE FOIS POUR TOUTE</div>
+        <?php the_post_thumbnail('large', array('class' => 'nouvelle-hero')) ?>
+        <div class="title-nouvelle"><?php the_title(); // Titre de la page ?></div>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -146,25 +146,12 @@
         <section class="info-block">
                 <div class="info-container">
                     <div class="info-content">
-                        <p class="info-description">
-                            La Ligue des droits et libertés salue ce jugement déterminant dans la lutte au profilage racial à Montréal. 
-                            Pour le respect des droits humains, c’est maintenant à la Ville de Montréal d’agir en interdisant les interpellations policières, 
-                            une bonne fois pour toute!
-                        </p>
+                        <div class="info-description">
+                        <?php the_content(); // Contenu principal de la page ?>
+                       </div>
                         <div class="info-footer">
-                            <span class="info-date"><i>4 septembre 2024</i></span>
-                            <div class="social-share">
-                                <span>PARTAGER: </span>
-                                <a href="https://www.instagram.com" class="social-icon instagram" target="_blank">
-                                    <img src="../pages-statiques-tristan/medias/facebook-app-symbol 1.png" alt="Instagram" />
-                                </a>
-                                <a href="https://twitter.com" class="social-icon x" target="_blank">
-                                    <img src="../pages-statiques-tristan/medias/instagram 1.png" alt="X" />
-                                </a>
-                                <a href="https://www.facebook.com" class="social-icon facebook" target="_blank">
-                                    <img src="../pages-statiques-tristan/medias/twitter 1.png" alt="Facebook" />
-                                </a>
-                            </div>
+                            <span class="info-date"><i><?php echo get_field("date"); // Titre de la page ?></i></span>
+                           
                         </div>
                     </div>
                 </div>

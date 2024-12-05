@@ -436,7 +436,7 @@ a:hover {
     justify-content: center;
   }
 }
-p {
+footer p {
   color: white;
 }
 
@@ -1143,7 +1143,7 @@ h8 {
   font-weight: bold;
 }
 
-.section-text {
+.section-text p {
   font-size: 1.5rem;
   line-height: 1.6;
   font-weight: 300;

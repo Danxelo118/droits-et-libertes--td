@@ -1,0 +1,97 @@
+.info {
+    margin: 0 auto;
+    width: 100%;
+    background-image: url("/wp-content/themes/pages-statiques-tristan/medias/info-background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+.info h1 {
+    font-size: 2.6em;
+    color: #E33216;
+    font-weight: bold;
+    padding-top: 40px;
+    text-align: center; 
+}
+
+
+.card {
+    width: 80%; 
+    background-color: #FBCC3C;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    height: auto; 
+    max-width: 300px; 
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.card p {
+    font-size: 1.2em; 
+    color: black;
+    line-height: 1.4;
+    margin: 0;
+    padding-top: 10px;
+}
+
+  .button-info {
+        text-align: center;
+        color: white;
+        padding: 20px 0 0 0;
+    }
+
+.btn-infoo {
+    width: 50%;
+    margin: 10px auto 0 auto; 
+    background-color: #E33216;
+    padding: 10px;
+    color: white;
+    position: relative;
+    font-size: 1em;
+    border: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+/* Version Tablet and Desktop */
+@media (min-width: 768px) {
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 40px 60px;
+    }
+
+    .info h1 {
+        grid-column: 1 / span 2;
+        font-size: 3em; 
+        text-align: left; 
+    }
+
+    .card {
+        width: 60%;
+        max-width: none;
+        margin: 0;
+        padding: 20px;
+    }
+    .button-info {
+        text-align: right;
+    }
+
+    .btn-infoo {
+        margin: 20px 0 0 0;
+        background-color: #E33216;
+        color: white;
+    }
+}

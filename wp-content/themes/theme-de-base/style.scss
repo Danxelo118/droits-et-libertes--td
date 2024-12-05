@@ -1,11 +1,16 @@
-@use "partials/header";
-@use "partials/footer";
-@use "partials/text";
-@use "partials/info";
-@use "partials/listedoits";
-@use "partials/pub";
-@use "partials/actu";
-@use "partials/vedette";
+
+@use "partials-scss/header";
+@use "partials-scss/footer";
+@use "partials-scss/text";
+@use "partials-scss/info";
+@use "partials-scss/listedoits";
+@use "partials-scss/pub";
+@use "partials-scss/actu";
+@use "partials-scss/vedette";
+@use "partials-scss/services";
+@use "partials-scss/nouvelles";
+@use "partials-scss/contact";
+@use "partials-scss/newshub";
 
 
 body, html {
@@ -17,6 +22,7 @@ body, html {
 
     
 }
+ 
  
 
 
