@@ -436,7 +436,7 @@ a:hover {
     justify-content: center;
   }
 }
-p {
+footer p {
   color: white;
 }
 
@@ -957,7 +957,7 @@ h8 {
     justify-content: center;
     align-items: center; 
 }*/
-.section-p {
+.section-text p {
   color: black;
   margin-top: 20px;
 }
