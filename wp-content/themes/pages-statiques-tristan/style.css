@@ -957,8 +957,9 @@ h8 {
     justify-content: center;
     align-items: center; 
 }*/
-.sante p {
+.section-p {
   color: black;
+  margin-top: 20px;
 }
 
 .nouvelle-hero {
