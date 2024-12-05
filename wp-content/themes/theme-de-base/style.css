@@ -1,12 +1,3 @@
-/*
-Theme Name: Collège Montmorency
-Author: Marie-Michelle Ouellet
-Author URI: https://tim-montmorency.com/timdoc/
-Description: Thème de base pour apprendre à faire un site Wordpress.
-Version: 1.0
--------------------------------------------------------------- */
-/*
-
 @charset "UTF-8";
 /* Navbar Toggler */
 .navbar-toggler {
@@ -445,7 +436,7 @@ a:hover {
     justify-content: center;
   }
 }
-p {
+footer p {
   color: white;
 }
 
@@ -838,7 +829,7 @@ h8 {
   position: relative;
   top: 0;
   padding: 30px;
-  margin: 50px;
+  margin: 30px;
   text-align: left;
   color: #E33216;
   font-weight: 600;
@@ -861,14 +852,6 @@ h8 {
 .sante-hero {
   filter: grayscale(100%);
   mix-blend-mode: overlay;
-}
-
-.paragraph-services p {
-  display: flex;
-  font-size: 30px;
-  margin: 50px;
-  padding: 20px;
-  color: black;
 }
 
 .liste-services {
@@ -961,6 +944,21 @@ h8 {
   background-color: transparent; /* Optional translucent background */
   padding: 10px 20px;
   border-radius: 8px;
+}
+
+/*
+.article-sante{
+    margin: 0 auto;
+    width: 100%;
+    background-position: center;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}*/
+.sante p {
+  color: black;
 }
 
 .nouvelle-hero {
@@ -1145,7 +1143,7 @@ h8 {
   font-weight: bold;
 }
 
-.section-text {
+.section-text p {
   font-size: 1.5rem;
   line-height: 1.6;
   font-weight: 300;
