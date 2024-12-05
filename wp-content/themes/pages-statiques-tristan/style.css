@@ -946,6 +946,21 @@ h8 {
   border-radius: 8px;
 }
 
+/*
+.article-sante{
+    margin: 0 auto;
+    width: 100%;
+    background-position: center;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}*/
+.sante p {
+  color: black;
+}
+
 .nouvelle-hero {
   filter: grayscale(100%);
   mix-blend-mode: overlay;
