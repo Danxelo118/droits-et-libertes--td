@@ -1,6 +1,7 @@
 <?php 
 /**
  * 	Template Name: services-hub
+ *  Template post type : page
  * 	Identique à page, mais avec une barre latérale
  */
 
