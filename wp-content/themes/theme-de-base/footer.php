@@ -18,7 +18,7 @@
             <div class="no1">
                 <div class="logo-footer">
                     <a href="./index.html">
-                        <img src="../pages-statiques-tristan/medias/logo.png" alt="logo-footer">
+                        <img src="<?php echo get_template_directory_uri(); ?>/medias/logo.png" alt="logo-footer">
                     </a>
                 </div>
                 <div class="contact-info">
