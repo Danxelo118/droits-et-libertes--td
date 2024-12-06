@@ -80,12 +80,14 @@
   background: rgba(255, 255, 255, 0);
 }
 
-.navbar-nav .nav-link {
+.navbar-nav a {
   color: white !important;
+  font-family: "Helvetica" !important;
+  margin-left: 33px;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ccc !important;
+.navbar-nav a:hover {
+  color: #E33216 !important;
 }
 
 .navbar-collapse {

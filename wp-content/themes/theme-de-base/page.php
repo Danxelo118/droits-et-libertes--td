@@ -3,7 +3,7 @@
  * Modèle permettant d'afficher une page.
  */
 
-get_header2(); // Affiche header.php
+get_header(); // Affiche header.php
 
 // Est-ce que nous avons des pages à afficher ?
 if ( have_posts() ) : 

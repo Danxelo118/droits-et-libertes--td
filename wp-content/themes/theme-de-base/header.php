@@ -64,23 +64,14 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="services-hub.html">Luttes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="news-hub.html">Publications</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Formations</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact-us.html">Nous joindre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link underline" href="#">Eng</a>
-            </li>
-        </ul>
+
+
+        <?php wp_nav_menu( array(
+                'container' => false,
+                'menu_class' => 'navbar-nav ml-auto',
+                ) );  ?>
+
+
     </div>
 </nav>
 

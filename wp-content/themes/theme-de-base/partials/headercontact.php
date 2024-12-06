@@ -55,82 +55,20 @@
         <p>Au cœur de plusieurs luttes sociales importantes, la Ligue des droits et libertés (LDL) protège les droits civils, politiques, économiques, sociaux et culturels depuis plusieurs décennies. L’histoire de la Ligue est intimement liée à l’histoire politique et sociale du Québec, à l’évolution du droit international ainsi qu’aux luttes menées par les mouvements sociaux d’ici et d’ailleurs. Depuis plus d’un demi-siècle, cet organisme indépendant et non partisan marque de son empreinte l’évolution de la société québécoise, contribuant à faire reconnaître les idéaux d’universalité, d’indivisibilité et d’interdépendance de tous les humains. </p>
         </div>
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="services-hub.html" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Luttes</a>
-                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <a class="dropdown-item" href="services-hub.html">Toutes les luttes</a>
-                            <a class="dropdown-item" href="#">COVID-19</a>
-                            <a class="dropdown-item" href="service.html">Droit à la santé</a>
-                            <a class="dropdown-item" href="#">Droit d’association</a>
-                            <a class="dropdown-item" href="#">Droits des personnes en détention</a>
-                            <a class="dropdown-item" href="#">Droits économiques, sociaux et culturels</a>
-                            <a class="dropdown-item" href="#">Droits des personnes migrantes</a>
-                            <a class="dropdown-item" href="#">Droits des peuples autochtones</a>
-                            <a class="dropdown-item" href="#">Environnement et droits humains</a>
-                            <a class="dropdown-item" href="#">Liberté d’expression</a>
-                            <a class="dropdown-item" href="#">Palestine et droits humains</a>
-                            <a class="dropdown-item" href="#">Police et mécanismes de surveillance</a>
-                            <a class="dropdown-item" href="#">Racisme & exclusion sociale</a>
-                            <a class="dropdown-item" href="#">Surveillance des populations</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
 
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="publicationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
-                        <div class="dropdown-menu" aria-labelledby="publicationDropdown">
-                            <a class="dropdown-item" href="news-hub.html">Toutes les publications</a>
-                            <a class="dropdown-item" href="#">Revue Droits et libertés</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Nouveau numéro – Regards critiques sur l’incarcération</a>
-                            <a class="dropdown-item" href="#">Dernier numéro – Éducation et droits humains</a>
-                            <a class="dropdown-item" href="#">Tous les numéros de la revue</a>
-                            <a class="dropdown-item" href="#">Éditoriaux et chroniques</a>
-                            <a class="dropdown-item" href="#">Tous les articles</a>
-                            <a class="dropdown-item" href="#">S’informer</a>
-                            
-                            <a class="dropdown-item" href="#">Toutes les publications</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Carnets</a>
-                            <a class="dropdown-item" href="#">Communiqués</a>
-                            <a class="dropdown-item" href="#">Déclarations & allocutions</a>
-                            <a class="dropdown-item" href="#">Lettres ouvertes</a>
-                            <a class="dropdown-item" href="#">Mémoires et représentations</a>
-                            <a class="dropdown-item" href="#">Outils d’éducation aux droits</a>
-                            <a class="dropdown-item" href="#">Rapports et analyses</a>
-                            <a class="dropdown-item" href="#">Vidéos</a>
-                         
 
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="formationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Formations</a>
-                        <div class="dropdown-menu" aria-labelledby="formationsDropdown">
-                            <a class="dropdown-item" href="#">Ateliers</a>
-                            <a class="dropdown-item" href="#">Demander un atelier</a>
-                            <a class="dropdown-item" href="#">Outils d’éducation aux droits</a>
-                            <a class="dropdown-item" href="#">Lexique</a>
-                     
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="contact-us.html" id="propsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nous joindre</a>
-                        <div class="dropdown-menu" aria-labelledby="formationsDropdown">
-                            <a class="dropdown-item" href="contact-us.html">Contact</a>
-                    </li>
-                
+        <?php wp_nav_menu( array(
+                'container' => false,
+                'menu_class' => 'navbar-nav ml-auto',
+                ) );  ?>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link underline" href="#" role="button">Eng</a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </nav>
+
+    </div>
+</nav>
 
         <div class="header-buttons">
             <button class="btn-donner">
