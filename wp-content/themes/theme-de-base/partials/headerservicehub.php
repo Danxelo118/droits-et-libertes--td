@@ -50,7 +50,7 @@
         </a>
         <div class="overlay-text3"></div>
         <img src="../pages-statiques-tristan/medias/fond.png" alt="">
-        <img src="../pages-statiques-tristan/medias/new1bw.png" class="nouvelle-hero" alt="">
+        <?php the_post_thumbnail('large', array('class' => 'nouvelle-hero')) ?>
         <div class="title-nouvelle2">SERVICES</BR></div>
         <nav class="navbar navbar-expand-lg navbar-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

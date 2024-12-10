@@ -39,19 +39,21 @@
 >
 
 <header>
+
 <div class="promo-banner" id="promo-banner">
         <p><strong>Travail scolaire - <a href="https://liguedesdroits.ca/" target="_blank">Visitez le vrai site web</a></strong></p>
         <button id="close-banner">X</button>
     </div>
 
     <div class="header">
-        <a class="navbar-brand" href="./index.html">
-            <img src="../pages-statiques-tristan/medias/logo.png" alt="Logo" class="logo" id="logo">
+        <a class="navbar-brand" href="<?php echo home_url('/index'); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/medias/logo.png" alt="Logo" class="logo" id="logo"> 
+            </a>
         </a>
         <div class="overlay-text3"></div>
         <img src="../pages-statiques-tristan/medias/fond.png" alt="">
-        <img src="../pages-statiques-tristan/medias/new1bw.png" class="nouvelle-hero" alt="">
-        <div class="title-nouvelle2">PUBLICATONS <BR> NOUVELLES <BR> ACTUALITÉS</BR></BR></div>
+        <?php the_post_thumbnail('large', array('class' => 'nouvelle-hero')) ?>
+        <div class="title-nouvelle"><?php the_title(); // Titre de la page ?></div>
         <nav class="navbar navbar-expand-lg navbar-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -69,6 +71,7 @@
 </nav>
 
 
+
         <div class="header-buttons">
             <button class="btn-donner">
                 <strong>DONNER</strong>
@@ -81,10 +84,7 @@
             </button>
         </div>
 
-
         
-        
-    </div>
 
 </header>
 

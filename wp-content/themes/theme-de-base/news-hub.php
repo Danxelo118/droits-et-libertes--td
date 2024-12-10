@@ -1,7 +1,7 @@
 <?php 
 /**
  * 	Template Name: news-hub
- * 	Identique à page, mais avec une barre latérale
+ * 	Template Post Type: post, page, article, nouvelle, 
  */
 
  get_template_part( 'partials/headerarticlehub' ); 
@@ -11,21 +11,13 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 	while ( have_posts() ) : the_post(); 
 ?>
 
-	<article>
-		<?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
-			<h2>
-				<?php the_title(); // Titre de la page ?>
-			</h2>
-		<?php endif; ?>
-		
-		<?php the_content(); // Contenu principal de la page ?>
-	</article>
+
 
 	<section class="actualites-hub">
         <div class="hero-container">
             <div class="hero-text">
-                <h1 class="hero-title">ACTUALITÉ EN UN COUP D'OEIL</h1>
-                <p class="hero-description">Restez informé des dernières nouvelles en matière de droits et libertés.</p>
+                <h1 class="hero-title"><?php echo get_field("title-banner"); // Titre de la page ?></h1>
+                <p class="hero-description"><?php echo get_field("description-banner"); // Titre de la page ?></p>
             </div>
         </div>
 
@@ -36,6 +28,8 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                 <option value="asc">Les plus anciennes</option>
             </select>
         </div>
+
+        
         <div class="news-cards-container" id="news-cards-container">
           
             <div class="news-card2 featured-news-card">
