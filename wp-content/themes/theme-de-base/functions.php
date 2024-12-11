@@ -32,6 +32,9 @@ function add_style_and_js()  {
 		2. get_template_directory_uri() . '/style.css' = Chemin où ce trouve le fichier CSS en question
 	*/
 	wp_enqueue_style('default', get_template_directory_uri() . '/style.css?v='.time());
+	// Enqueue Swiper JS from CDN
+    wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css', array(), null, true);
+
 
 	/* Pour ajoutez une feuille de style supplémentaire, copier la ligne précédente et ajuster le chemin du fichier de façon relative vers votre nouveau fichier CSS */
 
@@ -41,11 +44,17 @@ function add_style_and_js()  {
 		 3. array() = Liste des dépendances de ce script (généralement vide)
 		 4. false = Si un no de version doit être ajouté (généralement à false)
 		 5. true = Est-ce que le script doit-être ajouté à la fin du body. Si mis à false le script est ajouter dans le head à la place
+		 
 	*/
+	
+
 	wp_enqueue_script('default', get_template_directory_uri() . '/main.js?v='.time(), array(), false, true);
 
 	/* Pour ajoutez un script, copier la ligne précédente et ajuster le chemin de façon relative vers votre nouveau fichier JS */
+	// Enqueue Swiper JS from CDN
+    wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array(), null, true);
 }
+
 
 /* Appel de la fonction ajoutant les styles et scripts */
 add_action('wp_enqueue_scripts', 'add_style_and_js'); 

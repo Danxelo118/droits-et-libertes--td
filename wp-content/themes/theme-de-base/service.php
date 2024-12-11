@@ -11,12 +11,6 @@ if (have_posts()) : // Check if there are pages to display?
     while (have_posts()) : the_post();
 ?>
 
-<article>
-    <?php if (!is_front_page()) : ?>
-        <h2><?php the_title(); ?></h2> <!-- Title of the page -->
-    <?php endif; ?>
-    <?php the_content(); ?> <!-- Main content of the page -->
-</article>
 
 <!-- Section displaying information about the service -->
 <section class="section-text">
@@ -30,48 +24,69 @@ if (have_posts()) : // Check if there are pages to display?
     </div>
 </section>
 
-<!-- Related services section -->
 <section class="news-section-services">
     <div class="news-header">
-        <h2 class="title">LUTTES CONNEXES</h2>
+        <h2 class="title"><?php echo get_field("title-banner"); // Title for the section ?></h2>
     </div>
     <div class="news-cards">
-        <div class="news-card">
-            <img src="../pages-statiques-tristan/medias/new1.jpg" alt="Titre 1">
-            <h3>Pour l’interdiction des interpellations policières</h3>
-            <p>La Ligue des droits et libertés salue ce jugement déterminant dans la lutte au profilage racial à Montréal.</p>
-            <a href="lien-vers-detail1" class="news-details">Plus de détails →</a>
-        </div>
-        <div class="news-card">
-            <img src="../pages-statiques-tristan/medias/new2.jpg" alt="Titre 2">
-            <h3>Adoption du PL 57 – Les risques sérieux d’atteinte aux droits et libertés</h3>
-            <p>Le PL57, adopté le 5 juin 2024 par le gouvernement du Québec, présente des risques sérieux d’atteinte aux droits et libertés.</p>
-            <a href="lien-vers-detail2" class="news-details">Plus de détails →</a>
-        </div>
-        <div class="news-card">
-            <img src="../pages-statiques-tristan/medias/new3.jpg" alt="Titre 3">
-            <h3>La LDL salue le rejet de la demande d’injonction de l’Université McGill</h3>
-            <p>Le rejet par la Cour supérieure de la demande d’injonction intentée par l’Université McGill évite la répression de ce moyen d’action légitime des étudiant-e-s.</p>
-            <a href="lien-vers-detail3" class="news-details">Plus de détails →</a>
-        </div>
-        <!-- More cards can be added here -->
+        <?php
+        $arguments = array(
+            'post_type' => 'service',
+            's' => 'DROIT À LA SANTÉ', // Search keyword
+        );
+        $projects = new WP_Query($arguments);
+
+        if ($projects->have_posts()) : 
+            while ($projects->have_posts()) : $projects->the_post();
+        ?>
+                <div class="news-card">
+                    <!-- Image -->
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                    <h3><?php the_title(); ?></h3>
+                    <p><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p> <!-- Display content trimmed to 20 words -->
+                    <a href="<?php the_permalink(); ?>" class="news-details">Plus de détails →</a>
+                </div>
+        <?php
+            endwhile;
+            wp_reset_postdata(); // Reset the post data after the loop
+        else : 
+        ?>
+            <p>Aucune actualité disponible.</p> <!-- Fallback message if no posts are found -->
+        <?php endif; ?>
     </div>
 </section>
+
+
 
 <!-- Additional services carousel or similar component -->
 <section class="autres-services">
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <h1>DROIT DES PEUPLES AUTOCHTONES</h1>
-                <img src="/wp-content/themes/pages-statiques-tristan/medias/tente.jpg" alt="Background Image 1">
-            </div>
-            <div class="swiper-slide">
-                <img src="/wp-content/themes/pages-statiques-tristan/medias/new3.jpg" alt="Background Image 2">
-            </div>
-            <!-- Add more slides if needed -->
+            <?php
+            // WP Query to fetch posts (or services)
+            $args = array(
+                'post_type' => 'service', // Replace with your custom post type if necessary
+                'posts_per_page' => 16,  // Adjust the number of posts to show
+            );
+            $query = new WP_Query($args);
+
+            if ($query->have_posts()) :
+                while ($query->have_posts()) : $query->the_post();
+            ?>
+                    <div class="swiper-slide">
+                        <h1><?php the_title(); ?></h1>
+                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                    </div>
+            <?php
+                endwhile;
+                wp_reset_postdata();  // Reset the post data after the loop
+            else :
+            ?>
+                <p>Aucun service trouvé.</p>
+            <?php endif; ?>
         </div>
     </div>
+    
     <!-- Swiper navigation buttons and counter below the image carousel -->
     <div class="swiper-navigation">
         <div class="swiper-button-prev">Service précédent</div>
@@ -86,6 +101,6 @@ else :
     get_template_part('partials/404'); // Show the 404 template if no pages are found
 endif;
 
-get_sidebar(); // Include the sidebar
+
 get_footer(); // Include the footer
 ?>
