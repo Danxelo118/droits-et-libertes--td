@@ -8,80 +8,81 @@
 get_template_part('partials/headerservicehub'); // Affiche headerservicehub.php
 
 if (have_posts()) : // Est-ce que nous avons des pages à afficher ?
-    // Si oui, bouclons au travers les pages (logiquement, il n'y en aura qu'une)
     while (have_posts()) : the_post();
 ?>
 
-<article>
-    <?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
-        <h2><?php the_title(); // Titre de la page ?></h2>
-    <?php endif; ?>
-    <?php the_content(); // Contenu principal de la page ?>
-</article>
 
-<section class="liste-services">
+
+<<section class="liste-services">
     <h2 class="section-title">Nos services</h2>
     <ul>
-        <li><a href="#">COVID-19</a></li>
-        <li><a href="droits-sante.html">Droit à la santé</a></li>
-        <li><a href="#">Droit d'association</a></li>
-        <li><a href="#">Droit des personnes en détention</a></li>
-        <li><a href="#">Droit économiques, sociaux et culturels</a></li>
-        <li><a href="#">Droit des personnes migrantes</a></li>
-        <li><a href="#">Droit des peuples autochtones</a></li>
-        <li><a href="#">Environnement et droits humains</a></li>
-        <li><a href="#">Liberté d'expression</a></li>
-        <li><a href="#">Palestine et droits humains</a></li>
-        <li><a href="#">Police et mécanismes de surveillance</a></li>
-        <li><a href="#">Racisme et exclusion sociale</a></li>
-        <li><a href="#">Surveillance des populations</a></li>
+        <?php
+        // Query all posts of the 'service' custom post type
+        $args = array(
+            'post_type' => 'service', // The custom post type for services
+            'posts_per_page' => -1,   // Get all posts
+            'post_status' => 'publish' // Only published posts
+        );
+        $services_query = new WP_Query($args);
+
+        // Loop through the services and display them
+        if ($services_query->have_posts()) :
+            while ($services_query->have_posts()) : $services_query->the_post();
+                ?>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <?php
+            endwhile;
+        else :
+            echo '<li>No services available.</li>';
+        endif;
+
+        // Reset the post data
+        wp_reset_postdata();
+        ?>
     </ul>
 </section>
+
 
 <section class="news-section-services">
     <div class="news-header">
         <h2 class="title">Luttes connexes</h2>
     </div>
     <div class="news-cards">
-        <div class="news-card">
-            <img src="../pages-statiques-tristan/medias/covid.jpg" alt="COVID-19">
-            <h3>COVID-19</h3>
-            <a href="service.html" class="news-details">Plus de détails →</a>
-        </div>
-        <div class="news-card">
-            <img src="../pages-statiques-tristan/medias/sante-hero.jpg" alt="Droit à la santé">
-            <h3>Droit à la santé</h3>
-            <a href="service.html" class="news-details">Plus de détails →</a>
-        </div>
-        <div class="news-card">
-            <img src="../pages-statiques-tristan/medias/apropos-hero.jpg" alt="Droit d'association">
-            <h3>Droit d'association</h3>
-            <a href="service.html" class="news-details">Plus de détails →</a>
-        </div>
-        <div class="news-card">
-            <img src="../pages-statiques-tristan/medias/new6.jpg" alt="Droit des personnes en détention">
-            <h3>Droit des personnes en détention</h3>
-            <a href="service.html" class="news-details">Plus de détails →</a>
-        </div>
-        <div class="news-card">
-            <img src="../pages-statiques-tristan/medias/new2.jpg" alt="Droit économiques, sociaux et culturels">
-            <h3>Droit économiques, sociaux et culturels</h3>
-            <a href="service.html" class="news-details">Plus de détails →</a>
-        </div>
-        <div class="news-card">
-            <img src="../pages-statiques-tristan/medias/migrant.jpg" alt="Droit des personnes migrantes">
-            <h3>Droit des personnes migrantes</h3>
-            <a href="service.html" class="news-details">Plus de détails →</a>
-        </div>
+        <?php
+        // Query for related 'news' or 'services' posts
+        $related_services_args = array(
+            'post_type' => 'service', // Assuming related services are fetched here
+            'posts_per_page' => 6, // Limit number of related posts
+        );
+        $related_services_query = new WP_Query($related_services_args);
+
+        if ($related_services_query->have_posts()) :
+            while ($related_services_query->have_posts()) : $related_services_query->the_post();
+        ?>
+                <div class="news-card">
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                    <h3><?php the_title(); ?></h3>
+                    <p><?php echo do_shortcode(get_the_content()); ?></p>
+
+                    <a href="<?php the_permalink(); ?>" class="news-details">Plus de détails →</a>
+                </div>
+
+        <?php
+            endwhile;
+            wp_reset_postdata();
+        else :
+        ?>
+            <div class="news-card">Aucun article connexe trouvé</div>
+        <?php endif; ?>
     </div>
 </section>
 
 <?php
     endwhile; // Fermeture de la boucle
-else : // Si aucune page n'a été trouvée
+else :
     get_template_part('partials/404'); // Affiche partials/404.php
 endif;
 
-get_sidebar(); // Affiche le contenu de sidebar.php
+
 get_footer(); // Affiche footer.php
 ?>

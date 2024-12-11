@@ -4,7 +4,7 @@
  * Description: Page template for the Contact Us page with a sidebar.
  */
 
-get_header(); // Inclure l'en-tête global du thème.
+get_header(); // Inclure l'en-tête global du thème  .
 
 if ( have_posts() ) : 
     while ( have_posts() ) : the_post(); 

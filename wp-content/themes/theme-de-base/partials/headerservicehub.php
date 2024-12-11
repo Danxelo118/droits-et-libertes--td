@@ -50,8 +50,9 @@
         </a>
         <div class="overlay-text3"></div>
         <img src="../pages-statiques-tristan/medias/fond.png" alt="">
-        <?php the_post_thumbnail('large', array('class' => 'nouvelle-hero')) ?>
-        <div class="title-nouvelle2">SERVICES</BR></div>
+        <?php the_post_thumbnail('large', array('class' => 'sante-hero')) ?>
+        <div class="title-nouvelle2"><?php the_title(); // Titre de la page ?></div>
+        
         <nav class="navbar navbar-expand-lg navbar-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
