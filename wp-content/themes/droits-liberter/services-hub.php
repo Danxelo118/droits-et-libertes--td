@@ -13,14 +13,14 @@ if (have_posts()) : // Est-ce que nous avons des pages à afficher ?
 
 
 
-<<section class="liste-services">
+<section class="liste-services">
     <h2 class="section-title">Nos services</h2>
     <ul>
         <?php
         // Query all posts of the 'service' custom post type
         $args = array(
             'post_type' => 'service', // The custom post type for services
-            'posts_per_page' => -3,   // Get all posts
+            'posts_per_page' => -1,   // Get all posts
             'post_status' => 'publish' // Only published posts
         );
         $services_query = new WP_Query($args);
@@ -51,7 +51,7 @@ if (have_posts()) : // Est-ce que nous avons des pages à afficher ?
         <?php
         // Query for related 'news' or 'services' posts
         $related_services_args = array(
-            'post_type' => 'service', // Assuming related services are fetched here
+            'post_type' => 'service-hub', // Assuming related services are fetched here
             'posts_per_page' => 6, // Limit number of related posts
         );
         $related_services_query = new WP_Query($related_services_args);
