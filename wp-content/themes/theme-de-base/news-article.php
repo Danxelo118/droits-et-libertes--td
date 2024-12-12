@@ -44,30 +44,30 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
     </section>
 
     <section class="new-section">
-        <h2 class="section-title">Publié par:</h2>
+        <h2 class="section-title"><?php echo get_field("publié");?></h2>
         <div class="author-cards">
             <div class="author-card">
-                <img src="../pages-statiques-tristan/medias/woman.png" alt="Author 1" class="author-image">
+                <img src="<?php echo get_field('author2'); ?>" alt="Author 1" class="author-image">
                 <div class="author-info">
-                    <strong>MYLÈNE SANON</strong>
-                    <p>Communiqué de presse pour diffusion immédiate</p>
+                    <strong><?php echo get_field("nameauthor");?></strong>
+                    <p><?php echo get_field("descriptionauthor");?></p>
                 </div>
             </div>
             <div class="author-cards">
                 <div class="author-card">
-                    <img src="../pages-statiques-tristan/medias/woman.png" alt="Author 1" class="author-image">
+                    <img src="<?php echo get_field('author2'); ?>" alt="Author 1" class="author-image">
                     <div class="author-info">
-                        <strong>MYLÈNE SANON</strong>
-                        <p>Communiqué de presse pour diffusion immédiate</p>
+                    <strong><?php echo get_field("nameauthor");?></strong>
+                    <p><?php echo get_field("descriptionauthor");?></p>
                     </div>
                 </div>
             </div>
             <div class="author-cards">
                 <div class="author-card">
-                    <img src="../pages-statiques-tristan/medias/woman.png" alt="Author 1" class="author-image">
+                    <img src="<?php echo get_field('author3'); ?>" alt="Author 1" class="author-image">
                     <div class="author-info">
-                        <strong>MYLÈNE SANON</strong>
-                        <p>Communiqué de presse pour diffusion immédiate</p>
+                    <strong><?php echo get_field("nameauthor");?></strong>
+                    <p><?php echo get_field("descriptionauthor");?></p>
                     </div>
                 </div>
         </div>
@@ -75,38 +75,37 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
     <section class="custom-section2">
         <div class="swiper-navigation2">
-            <div class="swiper-button-prev2">NOUVELLE <br> PRÉCÉDENTE</div>
+            <div class="swiper-button-prev2"><?php echo get_field("bouttonpre");?></div>
             <div id="slide-counter2">1 / 16</div>
-            <div class="swiper-button-next2">NOUVELLE <br> SUIVANTE</div>
+            <div class="swiper-button-next2"><?php echo get_field("bouttonsui");?></div>
         </div>
     </section>
 
 
     <section class="news-section-nouvelles">
         <div class="news-header">
-            <h2 class="title">ARTICLE RELIÉS</h2>
+            <h2 class="title"><?php echo get_field("articlerel");?></h2>
         </div>
         <div class="news-cards yes">
-            <div class="news-card ">
-                <img src="../pages-statiques-tristan/medias/new1.jpg" alt="Titre 1">
-                <h3>Pour l’interdiction des interpellations policières une bonne fois pour toute</h3>
-                <p>La Ligue des droits et libertés salue ce jugement déterminant dans la lutte au profilage racial à Montréal. </p>
-                <a href="lien-vers-detail1" class="news-details">Plus de détails →</a>
-            </div>
-            <div class="news-card">
-                <img src="../pages-statiques-tristan/medias/new2.jpg" alt="Titre 2">
-                <h3>Adoption du PL 57 – Les risques sérieux d’atteinte aux droits et libertés demeurent</h3>
-                <p>Malgré les amendements apportés, le PL57, adopté le 5 juin 2024 par le gouvernement du Québec, présente des risques sérieux d’atteinte aux droits et libertés des citoyen-ne-s et des organisations de la société civile.</p>
-                <a href="lien-vers-detail2" class="news-details">Plus de détails →</a>
-            </div>
-            <div class="news-card">
-                <img src="../pages-statiques-tristan/medias/new3.jpg" alt="Titre 3">
-                <h3>La LDL salue le rejet de la demande d’injonction de l’Université McGill</h3>
-                <p>Le rejet par la Cour supérieure de la demande d’injonction intentée par l’Université McGill évite la répression de ce moyen d’action légitime des étudiant-e-s.</p>
-                <a href="lien-vers-detail3" class="news-details">Plus de détails →</a>
-            </div>
-           
+    <?php
+    $arguments = array(
+        'post_type' => 'nouvelle',
+        'posts_per_page' => 3, 
+    );
+    $news_query = new WP_Query($arguments);
+    while ($news_query->have_posts()) : $news_query->the_post();
+    ?>
+        <div class="news-card">
+            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title_attribute(); ?>">
+            <h3><?php the_title(); ?></h3>
+            <p><?php echo wp_trim_words(get_the_content(), 20); ?></p>
+            <a href="<?php the_permalink(); ?>" class="news-details">Plus de détails →</a>
         </div>
+    <?php 
+    endwhile;
+    wp_reset_postdata();
+    ?>
+</div>
 
 
     </section>

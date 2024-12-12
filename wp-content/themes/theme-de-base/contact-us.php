@@ -12,7 +12,7 @@ if ( have_posts() ) :
 
 <article>
     <?php if (!is_front_page()) : // Afficher le titre uniquement si ce n'est pas la page d'accueil ?>
-        <h1 class="page-title"><?php the_title(); ?></h1>
+     
     <?php endif; ?>
 
     <div class="page-content">
