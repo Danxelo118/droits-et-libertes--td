@@ -108,7 +108,7 @@
   top: 35%;
   left: 30%;
   transform: translate(-50%, -50%);
-  font-size: 10em;
+  font-size: 5vw;
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
@@ -123,7 +123,7 @@
   top: 60%;
   left: 66%;
   transform: translate(-50%, -50%);
-  font-size: 10em;
+  font-size: 5vw;
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
@@ -221,53 +221,5 @@
 .nav-link.dropdown-toggle:hover {
 
   color: #E33216 !important;
-}
-
-@media (max-width: 1000px) {
-  .overlay-text1 {
-      font-size: 6em;
-  }
-
-  .overlay-text2 {
-      font-size: 6rem;
-      margin-top: 60px;
-  }
-}
-
-@media (max-width: 1600px) {
-  .overlay-text1 {
-      font-size: 8em;
-  }
-
-  .overlay-text2 {
-      font-size: 8rem;
-      margin-top: 0px;
-  }
-}
-
-@media (max-width: 1300px) {
-  .overlay-text1 {
-      font-size: 6em;
-  }
-
-  .overlay-text2 {
-      font-size: 6rem;
-      margin-top: 0px;
-  }
-}
-
-@media (max-width: 900px) {
-  .overlay-text1 {
-      margin-top: 50px;
-      font-size: 4em;
-      text-align: left !important;
-      margin-left: 10px;
-  }
-
-  .overlay-text2 {
-      margin-top: 50px;
-      font-size: 3rem;
-      text-align: left !important;
-  }
 }
 

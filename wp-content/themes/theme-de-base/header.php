@@ -41,21 +41,23 @@
 <header>
 
  <div class="promo-banner" id="promo-banner">
-        <p><strong>Travail scolaire - <a href="https://liguedesdroits.ca/" target="_blank">Visitez le vrai site web</a></strong></p>
+        <p><strong><?php the_field('top1header'); ?><a href="https://liguedesdroits.ca/" target="_blank"><?php the_field('top2header'); ?></a></strong></p>
         <button id="close-banner">X</button>
     </div>
 
     <div class="header">
-    <a class="navbar-brand" href="./index.html">
-    <img src="<?php echo get_template_directory_uri(); ?>/medias/logo.png" alt="Logo" class="logo" id="logo"> 
-    </a>
-    <div class="overlay-text1">LUTTER 
-        <br>POUR</div>
-    <div class="overlay-text2">LES DROITS <br>HUMAINS</div>
+    <div class="header">
+        <a class="navbar-brand" href="<?php echo home_url('/index'); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/medias/logo.png" alt="Logo" class="logo" id="logo"> 
+         
+        </a>
+    <div class="overlay-text1"><?php the_title(); ?>
+      </div>
+    <div class="overlay-text2"><?php the_content('card-summary'); ?></div>
     <img src="../pages-statiques-tristan/medias/fond.png" alt="">
     <video autoplay loop muted>
         <source src="<?php echo get_template_directory_uri(); ?>/medias/header.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
+      
     </video>
 
     
@@ -78,11 +80,11 @@
 
     <div class="header-buttons">
         <button class="btn-donner">
-            <strong>DONNER</strong>
+            <strong><?php the_field('boutton1header'); ?></strong>
             <i class="fas fa-wallet button-icon"></i>
         </button>
         <button class="btn-informer">
-            <strong>MEMBRE</strong>
+            <strong><?php the_field('boutton2header'); ?></strong>
         </button>
     </div>
 </div>

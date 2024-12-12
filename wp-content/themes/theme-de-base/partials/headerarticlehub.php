@@ -13,7 +13,6 @@
 <title>Ligue des droits et libertés</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 <title>
 	<?php bloginfo('name'); // Affiche le nom du blog ?> | 
 	<?php is_front_page() ? bloginfo('description') : wp_title(''); // si nous sommes sur la page d'accueil, affichez la description à partir des paramètres du site - sinon, affichez le titre du post ou de la page. ?>
@@ -42,14 +41,14 @@
 <header>
 
 <div class="promo-banner" id="promo-banner">
-        <p><strong>Travail scolaire - <a href="https://liguedesdroits.ca/" target="_blank">Visitez le vrai site web</a></strong></p>
+        <p><strong><?php echo get_field("top1header"); // Titre de la page ?><a href="https://liguedesdroits.ca/" target="_blank"><?php echo get_field("top2header"); // Titre de la page ?></a></strong></p>
         <button id="close-banner">X</button>
     </div>
 
     <div class="header">
         <a class="navbar-brand" href="<?php echo home_url('/index'); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/medias/logo.png" alt="Logo" class="logo" id="logo"> 
-            </a>
+         
         </a>
         <div class="overlay-text3"></div>
         <img src="../pages-statiques-tristan/medias/fond.png" alt="">
@@ -75,17 +74,16 @@
 
         <div class="header-buttons">
             <button class="btn-donner">
-                <strong>DONNER</strong>
+                <strong><?php echo get_field("boutton1header"); // Titre de la page ?></strong>
                 <i class="fas fa-wallet button-icon"></i>
         
             </button>
             <button class="btn-informer">
-                <strong>MEMBRE</strong>
+                <strong><?php echo get_field("boutton2header"); // Titre de la page ?></strong>
              
             </button>
         </div>
 
-        
 
 </header>
 

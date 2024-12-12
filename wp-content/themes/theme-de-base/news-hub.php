@@ -23,10 +23,10 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
         </div>
 
         <div class="sorting-container">
-            <label for="news-sort" class="sorting-label">Trier par:</label>
+            <label for="news-sort" class="sorting-label"><?php echo get_field("label-title"); // Titre de la page ?></label>
             <select id="news-sort" class="form-control">
-                <option value="desc">Les plus récentes</option>
-                <option value="asc">Les plus anciennes</option>
+                <option value="desc"><?php echo get_field("label-insert1"); // Titre de la page ?></option>
+                <option value="asc"><?php echo get_field("label-insert2"); // Titre de la page ?></option>
             </select>
         </div>
 
@@ -187,7 +187,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
         </div>
 
 
-        <button class="load-more-news-btn" id="load-more-btn">Voir plus de nouvelles</button>
+        <button class="load-more-news-btn" id="load-more-btn"><?php echo get_field("boutton"); // Titre de la page ?></button>
     </section>
 	
 <?php endwhile; // Fermeture de la boucle
