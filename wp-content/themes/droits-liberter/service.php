@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: services-hub
+ * Template Name: services-sante
  * Template Post Type: page, service
  * This template is for displaying a services page with additional related content sections
  */
