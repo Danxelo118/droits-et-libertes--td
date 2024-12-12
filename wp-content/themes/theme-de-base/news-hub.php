@@ -61,123 +61,27 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
         
 
-            <div class="news-card2">
-            <a href="<?php echo home_url('/nouvelle/pour-linterdiction-desinterpellations-policieresune-bonne-fois-pour-toute/'); ?>">            
-            <?php
-    $arguments = array(
-        'post_type' => 'nouvelle',
-        's' => 'POUR L’INTERDICTION DESINTERPELLATIONS POLICIÈRESUNE BONNE FOIS POUR TOUTE',
-    );
-    $projects = new WP_Query($arguments);
-    while ($projects->have_posts()) : $projects->the_post();
-    ?>
-        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="news-card-image">
-        <div class="news-card-body">
-            <h3 class="news-card-title"><?php the_title(); ?></h3>
-            <div class="news-card-description"><?php the_content('card-summary'); ?></div>
-            <div class="carte-textes-date"><?php the_field('card-date'); ?></div>
-            <div class="news-card-date"><?php echo get_the_date(); ?></div>
-           
-        </div>
-    <?php endwhile; wp_reset_postdata(); ?>
-    </a>
-            </div>
-    
+
+ <?php
+$arguments = ["post_type" => "nouvelle", "posts_per_page" => 5];
+$news_query = new WP_Query($arguments);
+while ($news_query->have_posts()):
+    $news_query->the_post(); ?> <div class="news-card2"> <a href="<?php the_permalink(); ?>"> <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title_attribute(); ?>" class="news-card-image"> <div class="news-card-body"> <h3 class="news-card-title"><?php the_title(); ?></h3> <div class="news-card-description"><?php echo wp_trim_words(
+    get_the_content(),
+    20
+); ?></div> <div class="carte-textes-date"><?php the_field(
+    "card-date"
+); ?></div> <div class="news-card-date"><?php echo get_the_date(); ?></div> </div> </a> </div> <?php
+endwhile;
+wp_reset_postdata();
+?> 
+
+
+
+
 
             
-            <div class="news-card2">
-            <a href="<?php echo home_url('/nouvelle/pour-linterdiction-desinterpellations-policieresune-bonne-fois-pour-toute/'); ?>">            
-            <?php
-    $arguments = array(
-        'post_type' => 'nouvelle',
-        's' => 'POUR L’INTERDICTION DESINTERPELLATIONS POLICIÈRESUNE BONNE FOIS POUR TOUTE',
-    );
-    $projects = new WP_Query($arguments);
-    while ($projects->have_posts()) : $projects->the_post();
-    ?>
-        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="news-card-image">
-        <div class="news-card-body">
-            <h3 class="news-card-title"><?php the_title(); ?></h3>
-            <div class="news-card-description"><?php the_content('card-summary'); ?></div>
-            <div class="carte-textes-date"><?php the_field('card-date'); ?></div>
-            <div class="news-card-date"><?php echo get_the_date(); ?></div>
-           
-        </div>
-    <?php endwhile; wp_reset_postdata(); ?>
-    </a>
-            </div>
-  
-
           
-            <div class="news-card2">
-            <a href="<?php echo home_url('/nouvelle/pour-linterdiction-desinterpellations-policieresune-bonne-fois-pour-toute/'); ?>">            
-            <?php
-    $arguments = array(
-        'post_type' => 'nouvelle',
-        's' => 'POUR L’INTERDICTION DESINTERPELLATIONS POLICIÈRESUNE BONNE FOIS POUR TOUTE',
-    );
-    $projects = new WP_Query($arguments);
-    while ($projects->have_posts()) : $projects->the_post();
-    ?>
-        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="news-card-image">
-        <div class="news-card-body">
-            <h3 class="news-card-title"><?php the_title(); ?></h3>
-            <div class="news-card-description"><?php the_content('card-summary'); ?></div>
-            <div class="carte-textes-date"><?php the_field('card-date'); ?></div>
-            <div class="news-card-date"><?php echo get_the_date(); ?></div>
-           
-        </div>
-    <?php endwhile; wp_reset_postdata(); ?>
-    </a>
-            </div>
-
-
-       
-            <div class="news-card2">
-            <a href="<?php echo home_url('/nouvelle/pour-linterdiction-desinterpellations-policieresune-bonne-fois-pour-toute/'); ?>">            
-            <?php
-    $arguments = array(
-        'post_type' => 'nouvelle',
-        's' => 'POUR L’INTERDICTION DESINTERPELLATIONS POLICIÈRESUNE BONNE FOIS POUR TOUTE',
-    );
-    $projects = new WP_Query($arguments);
-    while ($projects->have_posts()) : $projects->the_post();
-    ?>
-        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="news-card-image">
-        <div class="news-card-body">
-            <h3 class="news-card-title"><?php the_title(); ?></h3>
-            <div class="news-card-description"><?php the_content('card-summary'); ?></div>
-            <div class="carte-textes-date"><?php the_field('card-date'); ?></div>
-            <div class="news-card-date"><?php echo get_the_date(); ?></div>
-           
-        </div>
-    <?php endwhile; wp_reset_postdata(); ?>
-    </a>
-            </div>
-       
-
-          
-            <div class="news-card2">
-            <a href="<?php echo home_url('/nouvelle/pour-linterdiction-desinterpellations-policieresune-bonne-fois-pour-toute/'); ?>">            
-            <?php
-    $arguments = array(
-        'post_type' => 'nouvelle',
-        's' => 'POUR L’INTERDICTION DESINTERPELLATIONS POLICIÈRESUNE BONNE FOIS POUR TOUTE',
-    );
-    $projects = new WP_Query($arguments);
-    while ($projects->have_posts()) : $projects->the_post();
-    ?>
-        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="news-card-image">
-        <div class="news-card-body">
-            <h3 class="news-card-title"><?php the_title(); ?></h3>
-            <div class="news-card-description"><?php the_content('card-summary'); ?></div>
-            <div class="carte-textes-date"><?php the_field('card-date'); ?></div>
-            <div class="news-card-date"><?php echo get_the_date(); ?></div>
-           
-        </div>
-    <?php endwhile; wp_reset_postdata(); ?>
-    </a>
-        </div>
  
 
 
@@ -187,7 +91,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
         </div>
 
 
-        <button class="load-more-news-btn" id="load-more-btn"><?php echo get_field("boutton"); // Titre de la page ?></button>
+        <button class="load-more-news-btn" id="load-more-btn"><?php the_field('boutton'); ?></button>
     </section>
 	
 <?php endwhile; // Fermeture de la boucle
